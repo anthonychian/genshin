@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Characters from './components/Characters'
+import MyNavbar from './components/MyNavbar'
 import axios from 'axios';
 
 function App() {
@@ -11,9 +12,13 @@ function App() {
   })
 
   return (
+    <>
+    <MyNavbar/>
     <div className="App">
+      
       <Characters characters={characters} />
     </div>
+    </>
   );
 }
 

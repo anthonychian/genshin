@@ -1,10 +1,8 @@
 import React from 'react'
 import Char from './Char'
 import '../css/Characters.css';
-//import Container from 'react-bootstrap/Container'
 
 export default function Characters({characters}) {
-    // let count = 0;
     return (
         <div className="grid-container">
             {characters.map(c => (
@@ -16,4 +14,3 @@ export default function Characters({characters}) {
        
     )
 }
-/* <div key={c}>{c}</div> */

@@ -1,6 +1,13 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(10, 100px);
+    grid-template-columns: repeat(10, 7em);
+    grid-gap: 3em;
     background-color: rgb(49, 49, 138);
-    padding: 10vw;
+    
+    padding: 5em;
+
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
   }
