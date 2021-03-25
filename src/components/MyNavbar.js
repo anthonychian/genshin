@@ -11,7 +11,7 @@ export default function MyNavbar() {
     return (
         <div>
             <Navbar className="my-navbar" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Genshin</Navbar.Brand>
+                <Navbar.Brand className="brand-name" href="#home">Genshin</Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="#home">Characters</Nav.Link>
                         <Nav.Link href="#features">Teams</Nav.Link>

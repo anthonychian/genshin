@@ -1,3 +1,10 @@
 .my-navbar {
     height: 10vh;
+    font-size: 1em;
+    font-family: Verdana, sans-serif;
+}
+
+.brand-name {
+    font-size: 1.3em !important;
+    font-family: Verdana, sans-serif;
 }
