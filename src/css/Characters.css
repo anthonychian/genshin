@@ -1,11 +1,11 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(10, 7em);
-    grid-gap: 3em;
-    background-color: rgb(49, 49, 138);
+    grid-gap: 3.5em;
+    background-color: rgb(48, 48, 82);
+    width: 100vw;
+    height: 90vh;
     
-    padding: 5em;
-
     justify-content: center;
     align-content: center;
     justify-items: center;
