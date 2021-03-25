@@ -1,0 +1,6 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 100px);
+    background-color: rgb(49, 49, 138);
+    padding: 10vw;
+  }
