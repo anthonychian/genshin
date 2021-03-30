@@ -1,0 +1,15 @@
+.my-app {
+    
+    /* background-color: rgb(48, 48, 82); */
+    /* height: auto;
+    min-height: 100vh;
+    overflow: hidden; */
+}
+
+body { 
+    background: url("https://www.gensh.in/wallpaper/genshin/genshin_25_4K.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

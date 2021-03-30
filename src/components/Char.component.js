@@ -1,14 +1,20 @@
 import React from 'react'
-import '../css/Char.css';
+import  {Link} from 'react-router-dom'
+import '../css/Char.component.css';
 
 export default function Char({char}) {
     
     const url = "https://rerollcdn.com/GENSHIN/Characters/" + transformNameToURL(char) + ".png"
+    const link = `/characters/${char}`
     const displayName = transformNameToDisplay(char)
-    return ( 
-        <div className="grid-item">
-            <img src={url} alt="character"></img>
-            <div className="characterName">{displayName}</div>
+    return (
+        <div>
+            <Link to={link}>
+                <img className="grid-item"src={url} alt={char}/>
+            </Link>
+            <Link to={link}>
+                <div className="characterName">{displayName}</div>
+            </Link>
         </div>
     )
     

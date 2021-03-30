@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
-import Characters from './components/Characters'
+import React from 'react';
+import  {BrowserRouter as Router, Route} from 'react-router-dom'
+import Characters from './components/Characters.component'
+import CharDetails from './components/CharDetails.component';
 import MyNavbar from './components/MyNavbar'
-import axios from 'axios';
+import './App.css'
+
+
 
 function App() {
-  const [characters, setCharacters] = useState([])
-
-  axios.get("https://api.genshin.dev/characters")
-  .then(res => {
-    setCharacters(res.data.map(c => c))
-  })
 
   return (
-    <>
-    <MyNavbar/>
-    <div className="App">
-      
-      <Characters characters={characters} />
+    <div className="my-app">
+      <Router>
+        <MyNavbar/>
+        <Route path="/" exact component={Characters}/> 
+        <Route path="/characters/:name" component={CharDetails} />
+      </Router>
     </div>
-    </>
   );
 }
 

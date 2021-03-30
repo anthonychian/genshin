@@ -1,0 +1,199 @@
+:root {
+  --grid-gap: 1em;
+  --background-color: transparent;
+  --height: auto;
+  --width: auto;
+  --margin: 4em auto;
+  --padding: 4em;
+  --justify-content: center;
+  --align-content: center;
+  --justify-items: center;
+  --align-items: center;
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: var(--grid-gap);
+    background-color: var(--background-color);
+    height: var(--height);
+    width: var(--width);
+    max-width: 400px;
+    padding: var(--padding);
+    margin: var(--margin);
+    justify-content: var(--justify-content);
+    align-content: var(--align-content);
+    justify-items: var(--justify-items);
+    align-items: var(--align-items);
+  }
+  .title {
+    background-color: var(--background-color);
+    color: white;
+    font-size: 2.5em;
+    position: relative;
+    text-align: center;
+    margin: 4em auto -3em auto;
+    height: 100px;
+    width: var(--width);
+    max-width: 400px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-gap: var(--grid-gap);
+    background-color: var(--background-color);
+    height: var(--height);
+    width: var(--width);
+    max-width: 500px;
+    padding: var(--padding);
+    margin: var(--margin);
+    justify-content: var(--justify-content);
+    align-content: var(--align-content);
+    justify-items: var(--justify-items);
+    align-items: var(--align-items);
+  }
+  .title {
+    background-color: var(--background-color);
+    color: white;
+    font-size: 2.5em;
+    position: relative;
+    text-align: center;
+    margin: 4em auto -3em auto;
+    height: 100px;
+    width: var(--width);
+    max-width: 500px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-gap: var(--grid-gap);
+    background-color: var(--background-color);
+    height: var(--height);
+    width: var(--width);
+    max-width: 700px;
+    padding: var(--padding);
+    margin: var(--margin);
+    justify-content: var(--justify-content);
+    align-content: var(--align-content);
+    justify-items: var(--justify-items);
+    align-items: var(--align-items);
+  }
+  .title {
+    background-color: var(--background-color);
+    color: white;
+    font-size: 2.5em;
+    position: relative;
+    text-align: center;
+    margin: 4em auto -3em auto;
+    height: 100px;
+    width: var(--width);
+    max-width: 700px;
+  }
+}
+
+/* Medium devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-gap: var(--grid-gap);
+    background-color: var(--background-color);
+    height: var(--height);
+    width: var(--width);
+    max-width: 800px;
+    padding: var(--padding);
+    margin: var(--margin);
+    justify-content: var(--justify-content);
+    align-content: var(--align-content);
+    justify-items: var(--justify-items);
+    align-items: var(--align-items);
+  }
+  .title {
+    background-color: var(--background-color);
+    color: white;
+    font-size: 2.5em;
+    position: relative;
+    text-align: center;
+    margin: 4em auto -3em auto;
+    height: 100px;
+    width: var(--width);
+    max-width: 800px;
+  }
+}
+
+/* Large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    grid-gap: var(--grid-gap);
+    background-color: var(--background-color);
+    height: var(--height);
+    width: var(--width);
+    max-width: 1000px;
+    padding: var(--padding);
+    margin: var(--margin);
+    justify-content: var(--justify-content);
+    align-content: var(--align-content);
+    justify-items: var(--justify-items);
+    align-items: var(--align-items);
+  }
+  .title {
+    background-color: var(--background-color);
+    color: white;
+    font-size: 2.5em;
+    font-weight:400;
+    position: relative;
+    text-align: center;
+    margin: 4em auto -3em auto;
+    height: 100px;
+    width: var(--width);
+    max-width: 1000px;
+  }
+}
+
+/* Large devices (large laptops and desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    grid-gap: var(--grid-gap);
+    background-color: var(--background-color);
+    height: var(--height);
+    width: var(--width);
+    max-width: 1300px;
+    padding: var(--padding);
+    margin: var(--margin);
+    justify-content: var(--justify-content);
+    align-content: var(--align-content);
+    justify-items: var(--justify-items);
+    align-items: var(--align-items);
+  }
+  .title {
+    background-color: var(--background-color);
+    color: white;
+    font-size: 2.5em;
+    font-weight:400;
+    position: relative;
+    text-align: center;
+    margin: 4em auto -3em auto;
+    height: 100px;
+    width: var(--width);
+    max-width: 1000px;
+  }
+}
