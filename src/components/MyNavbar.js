@@ -11,11 +11,11 @@ export default function MyNavbar() {
     return (
         <div>
             <Navbar className="my-navbar" bg="dark" variant="dark">
-                <Navbar.Brand className="brand-name" href="#home">Genshin</Navbar.Brand>
+                <Navbar.Brand className="brand-name" href="/">Genshin</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Characters</Nav.Link>
-                        <Nav.Link href="#features">Teams</Nav.Link>
-                        <Nav.Link href="#pricing">Tier List</Nav.Link>
+                        <Nav.Link href="/">Characters</Nav.Link>
+                        <Nav.Link href="/teams">Teams</Nav.Link>
+                        <Nav.Link href="/tier-list">Tier List</Nav.Link>
                     </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />

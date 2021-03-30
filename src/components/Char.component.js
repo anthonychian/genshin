@@ -1,5 +1,7 @@
 import React from 'react'
 import  {Link} from 'react-router-dom'
+import Pulse from 'react-reveal/Bounce';
+
 import '../css/Char.component.css';
 
 export default function Char({char}) {
@@ -9,12 +11,14 @@ export default function Char({char}) {
     const displayName = transformNameToDisplay(char)
     return (
         <div>
-            <Link to={link}>
-                <img className="grid-item"src={url} alt={char}/>
-            </Link>
-            <Link to={link}>
-                <div className="characterName">{displayName}</div>
-            </Link>
+            <Pulse>
+                <Link to={link}>
+                    <img className="grid-item"src={url} alt={char}/>
+                </Link>
+                <Link to={link}>
+                    <div className="characterName">{displayName}</div>
+                </Link>
+            </Pulse>
         </div>
     )
     

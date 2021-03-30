@@ -1,20 +1,22 @@
 import React, { useEffect } from 'react'
+import Fade from 'react-reveal/Fade';
+
 import '../css/CharDetails.component.css'
-// import {useParams} from 'react-router-dom'
 
 export default function CharDetails({ match }) {
     let name = transformNameToURL(match.params.name)
     let charImgURL = `https://www.gensh.in/fileadmin/Database/Characters/${name}/charPortrait_${name}_XL.png`
     
-    useEffect(() => {
-        console.log(match)
-        console.log('Hi')
-    }, [match])
+    // useEffect(() => {
+    //     console.log(match)
+    // }, [match])
 
     return (
-        <div >
-            <img className="image"src={charImgURL}alt={name}/>
-        </div>
+        <Fade>
+            <div >
+                <img className="image"src={charImgURL}alt={name}/>
+            </div>
+        </Fade>
     )
 }
 
