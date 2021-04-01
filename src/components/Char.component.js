@@ -1,28 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import  {Link} from 'react-router-dom'
-import Pulse from 'react-reveal/Bounce';
+import Bounce from 'react-reveal/Bounce'
+import Pulse from 'react-reveal/Pulse'
+
 
 import '../css/Char.component.css';
 
 export default function Char({char}) {
     
+
+    const [hover, setHover] = useState(false);
+
+    function handleMouseHover() {
+        setHover(!hover);
+    }
+    
     const url = "https://rerollcdn.com/GENSHIN/Characters/" + transformNameToURL(char) + ".png"
     const link = `/characters/${char}`
     const displayName = transformNameToDisplay(char)
     return (
-        <div>
-            <Pulse>
-                <Link to={link}>
-                    <img className="grid-item"src={url} alt={char}/>
-                </Link>
-                <Link to={link}>
-                    <div className="characterName">{displayName}</div>
-                </Link>
-            </Pulse>
-        </div>
+        <Bounce>
+            <div
+            onMouseEnter={handleMouseHover}
+            onMouseLeave={handleMouseHover}>
+                {
+                hover && <div>
+                    <Pulse>
+                        <Link to={link}>
+                            <img className="grid-item-hover"src={url} alt={char}/>
+                        </Link>
+                        <Link to={link}>
+                            <div className="characterName">{displayName}</div>
+                        </Link>
+                    </Pulse>
+                </div>
+                }
+                {
+                !hover && <div>
+                    <Link to={link}>
+                        <img className="grid-item"src={url} alt={char}/>
+                    </Link>
+                    <Link to={link}>
+                        <div className="characterName">{displayName}</div>
+                    </Link>
+                </div>
+                }
+            </div>
+        </Bounce>
     )
     
 }
+
+
 
 function transformNameToURL(char) {
     let res = ""
