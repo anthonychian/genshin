@@ -1,21 +1,46 @@
-import React from 'react'
-// import React, { useEffect } from 'react'
+//import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Fade from 'react-reveal/Fade';
+import axios from 'axios';
 
 import '../css/CharDetails.component.css'
 
 export default function CharDetails({ match }) {
     let name = transformNameToURL(match.params.name)
     let charImgURL = `https://www.gensh.in/fileadmin/Database/Characters/${name}/charPortrait_${name}_XL.png`
+    let url = "https://api.genshin.dev/characters/" + name;
     
-    // useEffect(() => {
-    //     console.log(match)
-    // }, [match])
+    const [details, setDetails] = useState([])
+    
+    useEffect(() => {
+        axios.get(url)
+        .then(res => {
+          setDetails(res.data);
+        })
+      }, [url])
 
     return (
         <Fade>
-            <div >
-                <img className="image"src={charImgURL}alt={name}/>
+            <div>
+                <div className="character">
+                    <img className="image"src={charImgURL}alt={name}/>
+                
+                    <div className="vision">
+                        {details.vision}
+                    </div>
+                    <div className="weapon">
+                        {details.weapon}
+                    </div>
+                    <div className="affiliation">
+                        {details.affiliation}
+                    </div>
+                    <h1 className="rarity">
+                        {details.rarity}
+                    </h1>
+                    <div className="desc">
+                        {details.description}
+                    </div>
+                </div>
             </div>
         </Fade>
     )

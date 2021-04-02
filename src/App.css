@@ -1,7 +1,7 @@
 .my-app {
     
-    /* background-color: rgb(48, 48, 82); */
-    /* height: auto;
+    /* background-color: rgb(48, 48, 82);
+    height: auto;
     min-height: 100vh;
     overflow: hidden; */
 }
@@ -12,4 +12,4 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}

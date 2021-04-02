@@ -1,5 +1,225 @@
-.image {
+.character {
+    background-color: rgb(26, 26, 24, 0.7);
+    max-width: 900px;
     height: auto;
-    width: 100vw;
-    
+    width: auto;
+    text-align: center;
+    margin: auto;
 }
+
+.rarity {
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.desc {
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+@font-face {
+  font-family: 'GenshinFont';
+  src: url('../assets/ja-jp.ttf')  format('truetype');
+}
+
+    /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    
+    .vision {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .weapon {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .affiliation {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .image {
+        height: auto;
+        width: auto;
+        max-width: 500px;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    
+    .vision {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .weapon {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .affiliation {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .image {
+        height: auto;
+        width: auto;
+        max-width: 500px;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    
+    .vision {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .weapon {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .affiliation {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .image {
+        height: auto;
+        width: auto;
+        max-width: 500px;
+    }
+  }
+  
+  /* Medium devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+    .vision {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .weapon {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .affiliation {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .image {
+        height: auto;
+        width: auto;
+        max-width: 500px;
+    }
+  }
+  
+  /* Large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    
+    .vision {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 3.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .weapon {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 3.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .affiliation {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 3.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .image {
+        height: auto;
+        width: auto;
+        max-width: 700px;
+    }
+  }
+  
+  /* Large devices (large laptops and desktops, 1440px and up) */
+  @media only screen and (min-width: 1440px) {
+    
+    .vision {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 4em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .weapon {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 4em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .affiliation {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 4em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .image {
+        height: auto;
+        width: auto;
+        max-width: 1000px;
+    }
+  }
