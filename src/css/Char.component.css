@@ -1,26 +1,36 @@
 @font-face {
     font-family: 'GenshinFont';
     src: url('../assets/ja-jp.ttf')  format('truetype');
-  }
+}
 .characterName {
     color: white;
     font-family: 'GenshinFont';
     /* font-weight: bold; */
     font-size: 14px;
-    text-align: center;
 }
 .grid-item{
     border: 2px solid rgba(236, 198, 48, 0.3);
     background-color: rgba(53, 52, 52, 0.603);
-}
-.grid-item-hover {
-    border: 3px solid rgba(236, 198, 48, 0.8);
-    background-color: rgba(116, 113, 113, 0.699);
-    /* background-color: rgb(48, 48, 82); */
-}
-
-img {
     width: 5em;
     height: 5em;
     object-fit: cover;
 }
+.grid-item:hover {
+    border: 3px solid rgba(236, 198, 48, 0.8);
+    background-color: rgba(116, 113, 113, 0.699);
+    width: 6em;
+    height: 6em;
+    object-fit: cover;
+}
+.item-container {
+    width: 6em;
+    height: 6em;
+    text-align: center;
+}
+
+
+/* img {
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+} */

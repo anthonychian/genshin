@@ -24,10 +24,10 @@ export default function Char({char}) {
             onMouseEnter={handleMouseHover}
             onMouseLeave={handleMouseHover}>
                 {
-                hover && <div>
+                hover && <div className="item-container">
                     <Pulse>
                         <Link to={link}>
-                            <img className="grid-item-hover"src={url} alt={char}/>
+                            <img className="grid-item"src={url} alt={char}/>
                         </Link>
                         <Link to={link}>
                             <div className="characterName">{displayName}</div>
@@ -36,7 +36,7 @@ export default function Char({char}) {
                 </div>
                 }
                 {
-                !hover && <div>
+                !hover && <div className="item-container">
                     <Link to={link}>
                         <img className="grid-item"src={url} alt={char}/>
                     </Link>

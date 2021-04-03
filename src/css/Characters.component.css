@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'GenshinFont';
+  src: url('../assets/ja-jp.ttf')  format('truetype');
+}
+
 :root {
-  --grid-gap: 1em;
+  --grid-gap: 2em;
   --background-color: transparent;
+  --color: white;
+  --font: 'GenshinFont';
   --height: auto;
   --width: auto;
   --margin: 4em auto;
@@ -15,7 +22,7 @@
 @media only screen and (max-width: 600px) {
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: var(--grid-gap);
     background-color: var(--background-color);
     height: var(--height);
@@ -30,7 +37,8 @@
   }
   .title {
     background-color: var(--background-color);
-    color: white;
+    color: var(--color);
+    font-family: var(--font);
     font-size: 2.5em;
     position: relative;
     text-align: center;
@@ -45,7 +53,7 @@
 @media only screen and (min-width: 600px) {
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     grid-gap: var(--grid-gap);
     background-color: var(--background-color);
@@ -61,7 +69,8 @@
   }
   .title {
     background-color: var(--background-color);
-    color: white;
+    color: var(--color);
+    font-family: var(--font);
     font-size: 2.5em;
     position: relative;
     text-align: center;
@@ -92,7 +101,8 @@
   }
   .title {
     background-color: var(--background-color);
-    color: white;
+    color: var(--color);
+    font-family: var(--font);
     font-size: 2.5em;
     position: relative;
     text-align: center;
@@ -108,7 +118,6 @@
   .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-
     grid-gap: var(--grid-gap);
     background-color: var(--background-color);
     height: var(--height);
@@ -123,7 +132,8 @@
   }
   .title {
     background-color: var(--background-color);
-    color: white;
+    color: var(--color);
+    font-family: var(--font);
     font-size: 2.5em;
     position: relative;
     text-align: center;
@@ -154,7 +164,8 @@
   }
   .title {
     background-color: var(--background-color);
-    color: white;
+    color: var(--color);
+    font-family: var(--font);
     font-size: 2.5em;
     font-weight:400;
     position: relative;
@@ -171,14 +182,14 @@
   .grid-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-
+    grid-template-rows: auto;
     grid-gap: var(--grid-gap);
     background-color: var(--background-color);
     height: var(--height);
     width: var(--width);
     max-width: 1300px;
     padding: var(--padding);
-    margin: var(--margin);
+    margin: var(--margin); 
     justify-content: var(--justify-content);
     align-content: var(--align-content);
     justify-items: var(--justify-items);
@@ -186,7 +197,8 @@
   }
   .title {
     background-color: var(--background-color);
-    color: white;
+    color: var(--color);
+    font-family: var(--font);
     font-size: 2.5em;
     font-weight:400;
     position: relative;

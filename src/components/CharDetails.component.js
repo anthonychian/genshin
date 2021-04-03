@@ -24,7 +24,10 @@ export default function CharDetails({ match }) {
             <div>
                 <div className="character">
                     <img className="image"src={charImgURL}alt={name}/>
-                
+
+                    <div className="name">
+                        {details.name}
+                    </div>
                     <div className="vision">
                         {details.vision}
                     </div>
