@@ -1,6 +1,10 @@
+.characterContainer {
+  background-color: rgb(26, 26, 24, 0.7);
+}
 .character {
-    background-color: rgb(26, 26, 24, 0.7);
-    max-width: 900px;
+    /* background-color: rgb(26, 26, 24, 0.7); */
+    overflow: hidden;
+    max-width: 700px;
     height: auto;
     width: auto;
     text-align: center;
@@ -28,7 +32,14 @@
 
     /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    
+    .name {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
     .vision {
       color: white;
       font-family: 'GenshinFont';
@@ -61,7 +72,14 @@
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    
+    .name {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
     .vision {
       color: white;
       font-family: 'GenshinFont';
@@ -94,7 +112,14 @@
   
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    
+    .name {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
     .vision {
       color: white;
       font-family: 'GenshinFont';
@@ -127,6 +152,13 @@
   
   /* Medium devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+    .name {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
     
     .vision {
       color: white;
@@ -160,6 +192,13 @@
   
   /* Large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
+    .name {
+      color: white;
+      font-family: 'GenshinFont';
+      font-size: 3.5em;
+      font-weight: bold;
+      text-align: center;
+    }
     
     .vision {
       color: white;
@@ -193,6 +232,15 @@
   
   /* Large devices (large laptops and desktops, 1440px and up) */
   @media only screen and (min-width: 1440px) {
+    .skills {
+      color: white;
+      font-family: 'GenshinFont';
+      height: 10em;
+      width: 22em;
+      margin-top: -67em;
+      margin-left: 5em;
+      position: absolute;
+    }
     
     .name {
       color: white;
@@ -229,5 +277,6 @@
         height: auto;
         width: auto;
         max-width: 1000px;
+        margin-left: -15em;
     }
   }

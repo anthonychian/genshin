@@ -1,0 +1,19 @@
+.skillContainer {
+    text-align: start;
+    background-color: rgb(26, 26, 24, 1.0);
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 25px;
+    border: 2px solid rgb(58, 58, 179);
+    
+    
+}
+
+.skillName {
+    font-size: 1.2em;
+    padding-bottom: .5em;
+}
+
+.skillDesc {
+    font-size: .8em;
+}

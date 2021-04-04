@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Fade from 'react-reveal/Fade';
 import axios from 'axios';
 
+import Skill from './Skills.component'
 import '../css/CharDetails.component.css'
 
 export default function CharDetails({ match }) {
@@ -11,17 +12,22 @@ export default function CharDetails({ match }) {
     let url = "https://api.genshin.dev/characters/" + name;
     
     const [details, setDetails] = useState([])
+    const [skills, setSkills] = useState([])
     
+
     useEffect(() => {
         axios.get(url)
         .then(res => {
           setDetails(res.data);
+          console.log(res.data.skillTalents)
+          setSkills(res.data.skillTalents.map(s => s))
         })
-      }, [url])
+    }, [url])
+    
 
     return (
         <Fade>
-            <div>
+            <div className="characterContainer">
                 <div className="character">
                     <img className="image"src={charImgURL}alt={name}/>
 
@@ -43,6 +49,13 @@ export default function CharDetails({ match }) {
                     <div className="desc">
                         {details.description}
                     </div>
+                </div>
+                <div className="skills">
+                        {skills.map(s => (
+                            <div key={s}>
+                                <Skill skill={s} />
+                            </div>
+                        ))}
                 </div>
             </div>
         </Fade>
