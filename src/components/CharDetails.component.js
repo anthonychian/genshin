@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Fade from 'react-reveal/Fade';
 import axios from 'axios';
 
+import CharMenu from './CharMenu.component'
 import Skill from './Skills.component'
 import '../css/CharDetails.component.css'
 
@@ -28,13 +29,15 @@ export default function CharDetails({ match }) {
     return (
         <Fade>
             <div className="characterContainer">
+                <CharMenu />
                 <div className="character">
+                    
                     <img className="image"src={charImgURL}alt={name}/>
 
                     <div className="name">
                         {details.name}
                     </div>
-                    <div className="vision">
+                    {/* <div className="vision">
                         {details.vision}
                     </div>
                     <div className="weapon">
@@ -48,8 +51,9 @@ export default function CharDetails({ match }) {
                     </h1>
                     <div className="desc">
                         {details.description}
-                    </div>
+                    </div> */}
                 </div>
+                
                 <div className="skills">
                         {skills.map(s => (
                             <div key={s}>

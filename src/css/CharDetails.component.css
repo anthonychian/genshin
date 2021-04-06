@@ -1,14 +1,17 @@
+
 .characterContainer {
+  height: 100vh;
   background-color: rgb(26, 26, 24, 0.7);
+  display: grid;
+  grid-template-columns: .5fr 1.0fr .5fr;
 }
 .character {
     /* background-color: rgb(26, 26, 24, 0.7); */
-    overflow: hidden;
-    max-width: 700px;
+    /* overflow: hidden; */
+    max-width: 1000px;
     height: auto;
     width: auto;
     text-align: center;
-    margin: auto;
 }
 
 .rarity {
@@ -24,10 +27,6 @@
     font-weight: bold;
     font-size: 15px;
     text-align: center;
-}
-@font-face {
-  font-family: 'GenshinFont';
-  src: url('../assets/ja-jp.ttf')  format('truetype');
 }
 
     /* Extra small devices (phones, 600px and down) */
@@ -235,12 +234,19 @@
     .skills {
       color: white;
       font-family: 'GenshinFont';
+      height: auto;
+      width: 22em;
+      margin-top: 5em;
+    }
+    /* .skills {
+      color: white;
+      font-family: 'GenshinFont';
       height: 10em;
       width: 22em;
       margin-top: -67em;
       margin-left: 5em;
       position: absolute;
-    }
+    } */
     
     .name {
       color: white;
@@ -248,6 +254,7 @@
       font-size: 4em;
       font-weight: bold;
       text-align: center;
+      margin-top: 1em;
     }
 
     .vision {
@@ -276,7 +283,8 @@
     .image {
         height: auto;
         width: auto;
-        max-width: 1000px;
+        max-width: 900px;
         margin-left: -15em;
+        margin-top: 3em;
     }
   }

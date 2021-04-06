@@ -1,0 +1,78 @@
+:root {
+    --padding: 1.5em;
+    --font-size: 2em;
+    --font-size-hover: 2.3em;
+
+    --colorOnHover: rgb(255, 255, 255);
+    --colorNoHover: rgba(255, 255, 255, 0.555);
+  }
+.menu {
+    color: white;
+    font-family: 'GenshinFont';
+    padding: auto;
+    margin-top: 3em;
+    margin-left: 4em;
+}
+
+.attributes {
+    max-height: 144px;
+    max-width: 348px;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+}
+.attributes:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+}
+.weapons {
+    max-height: 144px;
+    max-width: 348px;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+}
+.weapons:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+}
+.artifacts {
+    max-height: 144px;
+    max-width: 348px;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+}
+.artifacts:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+}
+.constellations {
+    max-height: 144px;
+    max-width: 348px;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+}
+.constellations:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+}
+.talents {
+    max-height: 144px;
+    max-width: 348px;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+}
+.talents:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+}

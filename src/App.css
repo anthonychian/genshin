@@ -5,6 +5,10 @@
     min-height: 100vh;
     overflow: hidden; */
 }
+@font-face {
+    font-family: 'GenshinFont';
+    src: url('./assets/ja-jp.ttf')  format('truetype');
+}
 
 body { 
     background: url("https://www.gensh.in/wallpaper/genshin/genshin_25_4K.jpg") no-repeat center center fixed; 

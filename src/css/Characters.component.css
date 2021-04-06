@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'GenshinFont';
-  src: url('../assets/ja-jp.ttf')  format('truetype');
-}
+
 
 :root {
   --grid-gap: 2em;
