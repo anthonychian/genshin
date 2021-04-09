@@ -1,4 +1,4 @@
-.skillContainer {
+.constContainer {
     background-color: rgb(26, 26, 24, 1.0);
     margin-bottom: 1em;
     padding: 1em;
@@ -6,20 +6,20 @@
     border: 2px solid rgb(58, 58, 179);
 }
 
-.skillName {
+.constName {
     font-size: 1.3em;
     padding-bottom: .5em;
 }
 
-.skillDescLess {
+.constDescLess {
     font-size: 0.9em;
-    max-height: 150px;
+    max-height: 90px;
     overflow: hidden;
 }
-.skillDescMore {
+.constDescMore {
     font-size: 0.9em;
 }
-.viewSkill {
+.viewConst {
     margin-top: 0.5em;
     font-size: 0.8em;
     background-color: rgb(58, 58, 179);

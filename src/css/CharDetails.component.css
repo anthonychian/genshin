@@ -29,6 +29,96 @@
     text-align: center;
 }
 
+
+:root {
+  --padding: 1.5em;
+  --font-size: 2em;
+  --font-size-hover: 2.3em;
+
+  --colorOnHover: rgb(255, 255, 255);
+  --colorNoHover: rgba(255, 255, 255, 0.555);
+}
+.menu {
+  color: white;
+  font-family: 'GenshinFont';
+  padding: auto;
+  margin-top: 3em;
+  margin-left: 4em;
+}
+
+.attributes {
+  max-height: 144px;
+  max-width: 348px;
+  background-color: transparent;
+  border:transparent;
+  color: var(--colorNoHover);
+  font-size: var(--font-size);
+  padding: var(--padding);
+}
+.attributes:hover {
+  color: var(--colorOnHover);
+  font-size: var(--font-size-hover);
+  padding: var(--padding);
+}
+.weapons {
+  max-height: 144px;
+  max-width: 348px;
+  background-color: transparent;
+  border:transparent;
+  color: var(--colorNoHover);
+  font-size: var(--font-size);
+  padding: var(--padding);
+  
+}
+.weapons:hover {
+  color: var(--colorOnHover);
+  font-size: var(--font-size-hover);
+  padding: var(--padding);
+}
+.artifacts {
+  max-height: 144px;
+  max-width: 348px;
+  background-color: transparent;
+  border:transparent;
+  color: var(--colorNoHover);
+  font-size: var(--font-size);
+  padding: var(--padding);
+  
+}
+.artifacts:hover {
+  color: var(--colorOnHover);
+  font-size: var(--font-size-hover);
+  padding: var(--padding);
+}
+.constellations {
+  max-height: 144px;
+  max-width: 348px;
+  background-color: transparent;
+  border:transparent;
+  color: var(--colorNoHover);
+  font-size: var(--font-size);
+  padding: var(--padding);
+}
+.constellations:hover {
+  color: var(--colorOnHover);
+  font-size: var(--font-size-hover);
+  padding: var(--padding);
+}
+.talents {
+  max-height: 144px;
+  max-width: 348px;
+  background-color: transparent;
+  border:transparent;
+  color: var(--colorNoHover);
+  font-size: var(--font-size);
+  padding: var(--padding);
+}
+.talents:hover {
+  color: var(--colorOnHover);
+  font-size: var(--font-size-hover);
+  padding: var(--padding);
+}
+
     /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
     .name {
@@ -231,22 +321,20 @@
   
   /* Large devices (large laptops and desktops, 1440px and up) */
   @media only screen and (min-width: 1440px) {
+    .const {
+      color: white;
+      font-family: 'GenshinFont';
+      height: auto;
+      width: auto;
+      margin-top: 3em;
+    }
     .skills {
       color: white;
       font-family: 'GenshinFont';
       height: auto;
       width: 22em;
-      margin-top: 5em;
+      margin-top: 3em;
     }
-    /* .skills {
-      color: white;
-      font-family: 'GenshinFont';
-      height: 10em;
-      width: 22em;
-      margin-top: -67em;
-      margin-left: 5em;
-      position: absolute;
-    } */
     
     .name {
       color: white;
@@ -254,7 +342,7 @@
       font-size: 4em;
       font-weight: bold;
       text-align: center;
-      margin-top: 1em;
+      
     }
 
     .vision {
@@ -283,8 +371,10 @@
     .image {
         height: auto;
         width: auto;
-        max-width: 900px;
-        margin-left: -15em;
-        margin-top: 3em;
+        max-height: 800px;
+        max-width: 700px;
+        vertical-align: middle;
+        /* margin-left: -15em; */
+        /* margin-top: 0em; */
     }
   }

@@ -17,6 +17,8 @@
 .attributes {
     max-height: 144px;
     max-width: 348px;
+    background-color: transparent;
+    border:transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -29,6 +31,8 @@
 .weapons {
     max-height: 144px;
     max-width: 348px;
+    background-color: transparent;
+    border:transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -42,6 +46,8 @@
 .artifacts {
     max-height: 144px;
     max-width: 348px;
+    background-color: transparent;
+    border:transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -55,6 +61,8 @@
 .constellations {
     max-height: 144px;
     max-width: 348px;
+    background-color: transparent;
+    border:transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -67,6 +75,8 @@
 .talents {
     max-height: 144px;
     max-width: 348px;
+    background-color: transparent;
+    border:transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);

@@ -6,21 +6,21 @@ export default function CharMenu() {
 
     return (
         <div className="menu">
-            <div className="attributes">
+            <button className="attributes">
                 Attributes
-            </div>
-            <div className="weapons">
+            </button>
+            <button className="weapons">
                 Weapons
-            </div>
-            <div className="artifacts">
+            </button>
+            <button className="artifacts">
                 Artifacts
-            </div>
-            <div className="constellations">
+            </button>
+            <button className="constellations">
                 Constellations
-            </div>
-            <div className="talents">
+            </button>
+            <button className="talents">
                 Talents
-            </div>
+            </button>
         </div>
     )
 }
