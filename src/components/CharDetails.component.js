@@ -111,9 +111,9 @@ export default function CharDetails({ match }) {
                 {weaVisible && <div>Weapons</div>}
                 {artVisible && <div>Artifacts</div>}
                 {conVisible && <div className="const">
-                    {constellations.map(s => (
-                            <div key={s}>
-                                <Constellations constellation={s} />
+                    {constellations.map(a => (
+                            <div key={a}>
+                                <Constellations constellation={a} />
                             </div>
                         ))}
                     </div>}

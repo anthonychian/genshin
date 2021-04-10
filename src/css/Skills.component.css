@@ -22,6 +22,10 @@
 .viewSkill {
     margin-top: 0.5em;
     font-size: 0.8em;
-    background-color: rgb(58, 58, 179);
-    color: white;
+    /* background-color: rgb(58, 58, 179); */
+    /* color: white; */
+    color: rgb(85, 85, 250);
+    border: transparent;
+    background-color: transparent;
+    
 }

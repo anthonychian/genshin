@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import '../css/Skills.component.css';
 
 export default function Skill({skill}) {
@@ -9,15 +9,24 @@ export default function Skill({skill}) {
         setShowDesc(!showDesc)
     }
 
+    const textRef = useRef();
+    const buttonRef = useRef();
+
+    useEffect(() => {
+        if (textRef.current.scrollHeight <= textRef.current.offsetHeight) {
+            buttonRef.current.hidden = true
+        }
+    }, [])
+
     return (
         <div className="skillContainer">
             <div className="skillName">
             {skill.name}
             </div>
-            {!showDesc && <div className="skillDescLess">
+            {!showDesc && <div ref={textRef} className="skillDescLess">
                 {skill.description}
             </div>}
-            {!showDesc && <button className="viewSkill" onClick={handleShowDesc}>View More</button>}
+            {!showDesc && <button ref={buttonRef} className="viewSkill" onClick={handleShowDesc}>View More</button>}
             {showDesc && <div className="skillDescMore">
                 {skill.description}
             </div>}

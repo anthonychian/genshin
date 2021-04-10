@@ -1,4 +1,4 @@
-import React, { useState, useRef} from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import '../css/Constellations.component.css';
 
 export default function Constellations({constellation}) {
@@ -9,13 +9,25 @@ export default function Constellations({constellation}) {
     }
 
     const textRef = useRef();
+    const buttonRef = useRef();
 
-    function isOverflow(element) {
-        if (element.scrollHeight > element.offsetHeight) {
-            return true;
+    useEffect(() => {
+        if (textRef.current.scrollHeight <= textRef.current.offsetHeight) {
+            buttonRef.current.hidden = true
         }
-        return false;
-    }
+    }, [])
+
+    // function handleImageLoaded(e) {
+    //     this.setState({ imageStatus: 'loaded' });
+    //     console.log(e.target.scrollHeight);
+    // }
+
+    // function isOverflow(element) {
+    //     if (element.current.scrollHeight > element.current.offsetHeight) {
+    //         return true;
+    //     }
+    //     return false;
+    // }
 
     return (
         <div className="constContainer">
@@ -27,7 +39,7 @@ export default function Constellations({constellation}) {
                 {constellation.description}
             </div>}
 
-            {!showConst && isOverflow(textRef) && <button className="viewConst" onClick={handleShowDesc}>View More</button>}
+            {!showConst && <button ref={buttonRef} className="viewConst" onClick={handleShowDesc}>View More</button>}
             
             {showConst && <div className="constDescMore">
                 {constellation.description}
