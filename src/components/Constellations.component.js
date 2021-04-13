@@ -17,18 +17,6 @@ export default function Constellations({constellation}) {
         }
     }, [])
 
-    // function handleImageLoaded(e) {
-    //     this.setState({ imageStatus: 'loaded' });
-    //     console.log(e.target.scrollHeight);
-    // }
-
-    // function isOverflow(element) {
-    //     if (element.current.scrollHeight > element.current.offsetHeight) {
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
     return (
         <div className="constContainer">
             <div className="constName">

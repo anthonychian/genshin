@@ -14,8 +14,7 @@ export default function Char({char}) {
     function handleMouseHover() {
         setHover(!hover);
     }
-    
-    const url = "https://rerollcdn.com/GENSHIN/Characters/" + transformNameToURL(char) + ".png"
+    const charIconURL = "https://api.genshin.dev/characters/" + char + "/icon"
     const link = `/characters/${char}`
     const displayName = transformNameToDisplay(char)
     return (
@@ -27,7 +26,7 @@ export default function Char({char}) {
                 hover && <div className="item-container">
                     <Pulse>
                         <Link to={link}>
-                            <img className="grid-item"src={url} alt={char}/>
+                            <img className="grid-item"src={charIconURL} alt={char}/>
                         </Link>
                         <Link to={link}>
                             <div className="characterName">{displayName}</div>
@@ -38,7 +37,7 @@ export default function Char({char}) {
                 {
                 !hover && <div className="item-container">
                     <Link to={link}>
-                        <img className="grid-item"src={url} alt={char}/>
+                        <img className="grid-item"src={charIconURL} alt={char}/>
                     </Link>
                     <Link to={link}>
                         <div className="characterName">{displayName}</div>
@@ -51,34 +50,6 @@ export default function Char({char}) {
     
 }
 
-
-
-function transformNameToURL(char) {
-    let res = ""
-    let prev
-    if (char === "traveler-anemo") return "Traveler%20(Anemo)"
-    if (char === "traveler-geo") return "Traveler%20(Geo)"
-    for (let i = 0; i < char.length; i++) {
-        if (i === 0) {
-            res += char.charAt(i).toUpperCase();
-        }
-        else if (char.charAt(i)=== " ") {
-            res += "%20"
-        }
-        else if (char.charAt(i) === "-") {
-            res += "%20"
-        }
-        else {
-            if (prev === "-" || prev === " ")
-                res += char.charAt(i).toUpperCase();
-            else {
-                res += char.charAt(i)
-            }
-        }
-        prev = char.charAt(i)
-    }
-    return res;
-}
 function transformNameToDisplay(char) {
     let res = ""
     let prev

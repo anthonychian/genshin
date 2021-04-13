@@ -9,13 +9,14 @@ import Skill from './Skills.component'
 import '../css/CharDetails.component.css'
 
 export default function CharDetails({ match }) {
-    let name = transformNameToURL(match.params.name)
     let charImgURL = "https://api.genshin.dev/characters/" + match.params.name + "/portrait";
-    let url = "https://api.genshin.dev/characters/" + name;
+    let visionImgURL = "https://api.genshin.dev/elements/";
+    let url = "https://api.genshin.dev/characters/" + match.params.name;
     
     const [details, setDetails] = useState([])
     const [constellations, setConstellations] = useState([])
     const [skills, setSkills] = useState([])
+    const [vision, setVision] = useState([]);
 
     const [attVisible, setAtt] = useState(true);
     const [weaVisible, setWea] = useState(false);
@@ -63,20 +64,11 @@ export default function CharDetails({ match }) {
         axios.get(url)
         .then(res => {
           setDetails(res.data);
-          //console.log(res.data.skillTalents)
+          setVision(res.data.vision.toLowerCase())
           setConstellations(res.data.constellations.map(s => s))
-        })
-    }, [url])
-
-    useEffect(() => {
-        axios.get(url)
-        .then(res => {
-          setDetails(res.data);
-          //console.log(res.data.skillTalents)
           setSkills(res.data.skillTalents.map(s => s))
         })
     }, [url])
-    
 
     return (
         <Fade>
@@ -101,74 +93,49 @@ export default function CharDetails({ match }) {
                 </div>
 
                 <div className="character">
-                    <img className="image"src={charImgURL}alt={name}/>
+                    <img className="image"src={charImgURL}alt={details.name}/>
                     <div className="name">
                         {details.name}
                     </div>
                 </div>
+                
+                {attVisible && <Fade><div className="att">
+                    <div className="visionText">
+                        <img className="visionImg"src={visionImgURL + vision + "/icon"}alt={vision}/>
+                        {details.vision}
+                    </div>
+                    <div className="desc">{details.description}</div>
+                </div></Fade>}
 
-                {attVisible && <div>Attributes</div>}
-                {weaVisible && <div>Weapons</div>}
-                {artVisible && <div>Artifacts</div>}
-                {conVisible && <div className="const">
+                {weaVisible && <Fade><div>
+                    <div className="weaponText">
+                        {details.weapon}
+                    </div>
+                </div></Fade>}
+
+                {artVisible && <Fade><div>
+                    <div className="artifactText">
+                        Artifact
+                    </div>
+                </div></Fade>}
+
+                {conVisible && <Fade><div className="const">
                     {constellations.map(a => (
-                            <div key={a}>
-                                <Constellations constellation={a} />
-                            </div>
-                        ))}
-                    </div>}
-                {talVisible && <div className="skills">
+                        <div key={a}>
+                            <Constellations constellation={a} />
+                        </div>
+                    ))}
+                </div></Fade>}
+
+                {talVisible && <Fade><div className="skills">
                     {skills.map(s => (
                         <div key={s}>
                             <Skill skill={s} />
                         </div>
                     ))}
-                </div>}
+                </div></Fade>}
 
             </div>
         </Fade>
     )
-}
-/* <div className="vision">
-    {details.vision}
-</div>
-<div className="weapon">
-    {details.weapon}
-</div>
-<div className="affiliation">
-    {details.affiliation}
-</div>
-<h1 className="rarity">
-    {details.rarity}
-</h1>
-<div className="desc">
-    {details.description}
-</div>  */
-
-
-function transformNameToURL(char) {
-    let res = ""
-    let prev
-    if (char === "traveler-anemo") return "Traveler%20(Anemo)"
-    if (char === "traveler-geo") return "Traveler%20(Geo)"
-    for (let i = 0; i < char.length; i++) {
-        if (i === 0) {
-            res += char.charAt(i).toUpperCase();
-        }
-        else if (char.charAt(i)=== " ") {
-            res += "+"
-        }
-        else if (char.charAt(i) === "-") {
-            res += "+"
-        }
-        else {
-            if (prev === "-" || prev === " ")
-                res += char.charAt(i).toUpperCase();
-            else {
-                res += char.charAt(i)
-            }
-        }
-        prev = char.charAt(i)
-    }
-    return res;
 }
