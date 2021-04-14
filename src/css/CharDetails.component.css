@@ -1,201 +1,983 @@
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .characterContainer {
+    height: 100vh;
+    background-color: rgb(26, 26, 24, 0.7);
+    display: grid;
+    grid-template-rows: 0.3fr 0.5fr 0.1fr;
+    grid-template-areas: 
+    "character"
+    "menu"
+    "rightSide";
+    color: white;
+    font-family: 'GenshinFont';
+  }
+  :root {
+    --padding: 1.5em;
+    --font-size: 1em;
+    --font-size-hover: 1.3em;
+    --menu-max-height: 50px;
+    --menu-max-width: 150px;
 
-.characterContainer {
-  height: 100vh;
-  background-color: rgb(26, 26, 24, 0.7);
-  display: grid;
-  grid-template-columns: .5fr 1.0fr .5fr;
-  color: white;
-  font-family: 'GenshinFont';
-}
-.character {
-    /* background-color: rgb(26, 26, 24, 0.7); */
-    /* overflow: hidden; */
-    /* max-width: 1000px; */
-    /* height: auto;
-    width: auto; */
+    --colorOnHover: rgb(255, 255, 255);
+    --colorNoHover: rgba(255, 255, 255, 0.555);
+  }
+  .menu {
+    grid-area: menu;
+    padding: auto;
+    margin-top: 3em;
+    margin-left: 0.5em;
     text-align: center;
-}
-
-
-
-:root {
-  --padding: 1.5em;
-  --font-size: 2em;
-  --font-size-hover: 2.3em;
-
-  --colorOnHover: rgb(255, 255, 255);
-  --colorNoHover: rgba(255, 255, 255, 0.555);
-}
-.menu {
-  /* color: white;
-  font-family: 'GenshinFont'; */
-  padding: auto;
-  margin-top: 3em;
-  margin-left: 4em;
-}
-
-.attributes {
-  max-height: 144px;
-  max-width: 348px;
-  background-color: transparent;
-  border:transparent;
-  color: var(--colorNoHover);
-  font-size: var(--font-size);
-  padding: var(--padding);
-}
-.attributes:hover {
-  color: var(--colorOnHover);
-  font-size: var(--font-size-hover);
-  padding: var(--padding);
-}
-.weapons {
-  max-height: 144px;
-  max-width: 348px;
-  background-color: transparent;
-  border:transparent;
-  color: var(--colorNoHover);
-  font-size: var(--font-size);
-  padding: var(--padding);
-  
-}
-.weapons:hover {
-  color: var(--colorOnHover);
-  font-size: var(--font-size-hover);
-  padding: var(--padding);
-}
-.artifacts {
-  max-height: 144px;
-  max-width: 348px;
-  background-color: transparent;
-  border:transparent;
-  color: var(--colorNoHover);
-  font-size: var(--font-size);
-  padding: var(--padding);
-  
-}
-.artifacts:hover {
-  color: var(--colorOnHover);
-  font-size: var(--font-size-hover);
-  padding: var(--padding);
-}
-.constellations {
-  max-height: 144px;
-  max-width: 348px;
-  background-color: transparent;
-  border:transparent;
-  color: var(--colorNoHover);
-  font-size: var(--font-size);
-  padding: var(--padding);
-}
-.constellations:hover {
-  color: var(--colorOnHover);
-  font-size: var(--font-size-hover);
-  padding: var(--padding);
-}
-.talents {
-  max-height: 144px;
-  max-width: 348px;
-  background-color: transparent;
-  border:transparent;
-  color: var(--colorNoHover);
-  font-size: var(--font-size);
-  padding: var(--padding);
-}
-.talents:hover {
-  color: var(--colorOnHover);
-  font-size: var(--font-size-hover);
-  padding: var(--padding);
-}
-
-    /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
+  }
+  .rightSide {
+    grid-area: rightSide;
+  }
+  .attMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .attMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .weaMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
     
   }
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
+  .weaMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .artMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
     
   }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
+  .artMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .constMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .constMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .talMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .talMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .character {
+    grid-area: character;
+    text-align: center;
+  }
+  .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
     
   }
-  
-  /* Medium devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-
+  .image {
+    height: auto;
+    width: auto;
+    max-height: 200px;
+    max-width: 200px;
   }
-  
-  /* Large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
+
+
+  .visionText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 2em;
+    text-align: center;
+  }
+  .visionImg {
+    padding-right: .5em;
+    text-align: center;
+  }
+  .desc {
+    height: 100px;
+    width: 250px;
+    font-size: 1em;
+    padding-top: 3em;
+    padding-left: 2em;
+    margin: auto;
+    opacity: 0.5;
+  }
+  .weaponText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .artifactText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .const {
+    height: auto;
+    width: 22em;
+    margin: 2em auto;
+  }
+  .skills {
+    height: auto;
+    width: 22em;
+    margin: 2em auto;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .characterContainer {
+    height: 100vh;
+    background-color: rgb(26, 26, 24, 0.7);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.3fr;
+    grid-template-areas: 
+    "menu rightSide"
+    "character character";
+    color: white;
+    font-family: 'GenshinFont';
+  }
+  :root {
+    --padding: 1.5em;
+    --font-size: 1.2em;
+    --font-size-hover: 1.5em;
+    --menu-max-height: 70px;
+    --menu-max-width: 150px;
+
+    --colorOnHover: rgb(255, 255, 255);
+    --colorNoHover: rgba(255, 255, 255, 0.555);
+  }
+  .menu {
+    grid-area: menu;
+    padding: auto;
+    margin-top: 3em;
+    margin-left: 0.5em;
+  }
+  .rightSide {
+    grid-area: rightSide;
+  }
+  .attMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .attMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .weaMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
     
   }
-  
-  /* Large devices (large laptops and desktops, 1440px and up) */
-  @media only screen and (min-width: 1440px) {
-    .name {
-      color: white;
-      font-family: 'GenshinFont';
-      font-size: 4em;
-      font-weight: bold;
-      text-align: center;
-      
-    }
-    .image {
-      height: auto;
-      width: auto;
-      max-height: 800px;
-      max-width: 700px;
-    }
-
-    .att {
-      color: white;
-      font-family: 'GenshinFont';
-    }
-    .visionText {
-      padding-top: 2em;
-      padding-right: 1em;
-      font-size: 3em;
-      text-align: center;
-    }
-    .visionImg {
-      padding-right: .5em;
-      text-align: center;
-    }
-    .desc {
-      font-size: 1.5em;
-      padding-top: 3em;
-      opacity: 0.5;
-    }
-
-    .weaponText {
-      padding-top: 2em;
-      padding-right: 1em;
-      font-size: 3em;
-      text-align: center;
-    }
-    .artifactText {
-      padding-top: 2em;
-      padding-right: 1em;
-      font-size: 3em;
-      text-align: center;
-    }
-
-    .const {
-      color: white;
-      font-family: 'GenshinFont';
-      height: auto;
-      width: 22em;
-      margin-top: 3em;
-      margin-left: 1em;
-    }
-    .skills {
-      color: white;
-      font-family: 'GenshinFont';
-      height: auto;
-      width: 22em;
-      margin-top: 3em;
-      margin-left: 1em;
-    }
+  .weaMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
   }
+  .artMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .artMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .constMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .constMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .talMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .talMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .character {
+    grid-area: character;
+    text-align: center;
+  }
+  .name {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  .image {
+    height: auto;
+    width: auto;
+    max-height: 0px;
+    max-width: 0px;
+  }
+
+
+  .visionText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 2em;
+    text-align: center;
+  }
+  .visionImg {
+    padding-right: .5em;
+    text-align: center;
+  }
+  .desc {
+    height: 100px;
+    width: 250px;
+    font-size: 1em;
+    padding-top: 3em;
+    padding-left: 2em;
+    margin: auto;
+    opacity: 0.5;
+  }
+  .weaponText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .artifactText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .const {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+  .skills {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .characterContainer {
+    height: 100vh;
+    background-color: rgb(26, 26, 24, 0.7);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.3fr;
+    grid-template-areas: 
+    "menu rightSide"
+    "character character";
+    color: white;
+    font-family: 'GenshinFont';
+  }
+  :root {
+    --padding: 1.5em;
+    --font-size: 1.5em;
+    --font-size-hover: 1.8em;
+    --menu-max-height: 100px;
+    --menu-max-width: 200px;
+
+    --colorOnHover: rgb(255, 255, 255);
+    --colorNoHover: rgba(255, 255, 255, 0.555);
+  }
+  .menu {
+    grid-area: menu;
+    padding: auto;
+    margin-top: 3em;
+    margin-left: 2em;
+  }
+  .rightSide {
+    grid-area: rightSide;
+  }
+  .attMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .attMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .weaMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .weaMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .artMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .artMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .constMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .constMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .talMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .talMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .character {
+    grid-area: "character";
+    text-align: center;
+  }
+  .name {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .image {
+    height: auto;
+    width: auto;
+    max-height: 0px;
+    max-width: 0px;
+  }
+
+
+  .visionText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .visionImg {
+    padding-right: .5em;
+    text-align: center;
+  }
+  .desc {
+    height: 100px;
+    width: 300px;
+    font-size: 1.3em;
+    padding-top: 3em;
+    padding-left: 1.5em;
+    margin: auto;
+    opacity: 0.5;
+  }
+  .weaponText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .artifactText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .const {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+  .skills {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+}
+
+/* Medium devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .characterContainer {
+    height: 100vh;
+    background-color: rgb(26, 26, 24, 0.7);
+    display: grid;
+    grid-template-columns: .5fr 1.0fr .5fr;
+    grid-template-areas:
+    "menu character rightSide";
+    color: white;
+    font-family: 'GenshinFont';
+  }
+  :root {
+    --padding: 1.5em;
+    --font-size: 1.5em;
+    --font-size-hover: 1.8em;
+    --menu-max-height: 100px;
+    --menu-max-width: 250px;
+
+    --colorOnHover: rgb(255, 255, 255);
+    --colorNoHover: rgba(255, 255, 255, 0.555);
+  }
+  .menu {
+    grid-area: "menu";
+    padding: auto;
+    margin-top: 3em;
+    margin-left: 2em;
+  }
+  .rightSide {
+    grid-area: rightSide;
+  }
+  .attMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .attMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .weaMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .weaMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .artMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .artMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .constMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .constMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .talMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .talMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .character {
+    grid-area: "character";
+    text-align: center;
+  }
+  .name {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  .image {
+    height: auto;
+    width: auto;
+    max-height: 550px;
+    max-width: 250px;
+  }
+
+
+  .visionText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .visionImg {
+    padding-right: .5em;
+    text-align: center;
+  }
+  .desc {
+    height: 100px;
+    width: 300px;
+    font-size: 1.3em;
+    padding-top: 3em;
+    padding-left: 1em;
+    opacity: 0.5;
+    margin: auto;
+  }
+  .weaponText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .artifactText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .const {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+  .skills {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+}
+
+
+/* Large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .characterContainer {
+    height: 100vh;
+    background-color: rgb(26, 26, 24, 0.7);
+    display: grid;
+    grid-template-columns: .5fr 1.0fr .5fr;
+    color: white;
+    font-family: 'GenshinFont';
+  }
+  :root {
+    --padding: 1.5em;
+    --font-size: 1.7em;
+    --font-size-hover: 2em;
+    --menu-max-height: 144px;
+    --menu-max-width: 348px;
+
+    --colorOnHover: rgb(255, 255, 255);
+    --colorNoHover: rgba(255, 255, 255, 0.555);
+  }
+  .menu {
+    padding: auto;
+    margin-top: 3em;
+    margin-left: 4em;
+  }
+  .attMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .attMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .weaMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .weaMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .artMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .artMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .constMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .constMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .talMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .talMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .character {
+    text-align: center;
+  }
+  .name {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  .image {
+    height: auto;
+    width: auto;
+    max-height: 650px;
+    max-width: 700px;
+  }
+
+
+  .visionText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .visionImg {
+    padding-right: .5em;
+    text-align: center;
+  }
+  .desc {
+    height: 100px;
+    width: 300px;
+    font-size: 1.3em;
+    padding-top: 3em;
+    padding-left: 1em;
+    opacity: 0.5;
+    margin: auto;
+  }
+  .weaponText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .artifactText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .const {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+  .skills {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+}
+
+/* Large devices (large laptops and desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {   
+  .characterContainer {
+    height: 100vh;
+    background-color: rgb(26, 26, 24, 0.7);
+    display: grid;
+    grid-template-columns: .5fr 1.0fr .5fr;
+    color: white;
+    font-family: 'GenshinFont';
+  }
+  :root {
+    --padding: 1.5em;
+    --font-size: 2em;
+    --font-size-hover: 2.3em;
+    --menu-max-height: 144px;
+    --menu-max-width: 348px;
+
+    --colorOnHover: rgb(255, 255, 255);
+    --colorNoHover: rgba(255, 255, 255, 0.555);
+  }
+  .menu {
+    padding: auto;
+    margin-top: 3em;
+    margin-left: 4em;
+  }
+  .attMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .attMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .weaMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .weaMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .artMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+    
+  }
+  .artMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .constMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .constMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .talMenu {
+    max-height: var(--menu-max-height);
+    max-width: var(--menu-max-width);
+    background-color: transparent;
+    border:transparent;
+    color: var(--colorNoHover);
+    font-size: var(--font-size);
+    padding: var(--padding);
+  }
+  .talMenu:hover {
+    color: var(--colorOnHover);
+    font-size: var(--font-size-hover);
+    padding: var(--padding);
+  }
+  .character {
+    text-align: center;
+  }
+  .name {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  .image {
+    height: auto;
+    width: auto;
+    max-height: 800px;
+    max-width: 700px;
+  }
+  .visionText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .visionImg {
+    padding-right: .5em;
+    text-align: center;
+  }
+  .desc {
+    height: 100px;
+    width: 300px;
+    font-size: 1.5em;
+    padding-top: 3em;
+    padding-left: 1em;
+    opacity: 0.5;
+    margin: auto;
+  }
+  .weaponText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .artifactText {
+    padding-top: 2em;
+    padding-right: 1em;
+    font-size: 3em;
+    text-align: center;
+  }
+  .const {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+  .skills {
+    height: auto;
+    width: 22em;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+}

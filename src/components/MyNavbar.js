@@ -17,10 +17,6 @@ export default function MyNavbar() {
                         <Nav.Link href="/teams">Teams</Nav.Link>
                         <Nav.Link href="/tier-list">Tier List</Nav.Link>
                     </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-info">Search</Button>
-                </Form>
             </Navbar>
         </div>
     )

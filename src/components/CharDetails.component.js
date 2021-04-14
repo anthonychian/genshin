@@ -74,31 +74,35 @@ export default function CharDetails({ match }) {
         <Fade>
             <div className="characterContainer">
                 
-                <div className="menu">
-                    <button onClick={handleAttClick}className="attributes">
+                <div id="menu" className="menu">
+                    <button onClick={handleAttClick}className="attMenu">
                         Attributes
                     </button>
-                    <button onClick={handleWeaClick} className="weapons">
+                    <br/>
+                    <button onClick={handleWeaClick} className="weaMenu">
                         Weapons
                     </button>
-                    <button onClick={handleArtClick} className="artifacts">
+                    <br/>
+                    <button onClick={handleArtClick} className="artMenu">
                         Artifacts
                     </button>
-                    <button onClick={handleConClick} className="constellations">
+                    <br/>
+                    <button onClick={handleConClick} className="constMenu">
                         Constellations
                     </button>
-                    <button onClick={handleTalClick} className="talents">
+                    <br/>
+                    <button onClick={handleTalClick} className="talMenu">
                         Talents
                     </button>
                 </div>
 
-                <div className="character">
+                <div id="character"className="character">
                     <img className="image"src={charImgURL}alt={details.name}/>
                     <div className="name">
                         {details.name}
                     </div>
                 </div>
-                
+                <div id="rightSide">
                 {attVisible && <Fade><div className="att">
                     <div className="visionText">
                         <img className="visionImg"src={visionImgURL + vision + "/icon"}alt={vision}/>
@@ -134,7 +138,7 @@ export default function CharDetails({ match }) {
                         </div>
                     ))}
                 </div></Fade>}
-
+                </div>
             </div>
         </Fade>
     )
