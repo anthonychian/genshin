@@ -1,7 +1,8 @@
+
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .characterContainer {
-    height: 100vh;
+    height: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-rows: 0.3fr 0.5fr 0.1fr;
@@ -16,7 +17,7 @@
     --padding: 1.5em;
     --font-size: 1em;
     --font-size-hover: 1.3em;
-    --menu-max-height: 50px;
+    --menu-max-height: 30px;
     --menu-max-width: 150px;
 
     --colorOnHover: rgb(255, 255, 255);
@@ -25,6 +26,7 @@
   .menu {
     grid-area: menu;
     padding: auto;
+    height: 300px;
     margin-top: 3em;
     margin-left: 0.5em;
     text-align: center;
@@ -123,7 +125,6 @@
 
 
   .visionText {
-    padding-top: 2em;
     padding-right: 1em;
     font-size: 2em;
     text-align: center;
@@ -136,22 +137,22 @@
     height: 100px;
     width: 250px;
     font-size: 1em;
-    padding-top: 3em;
+    padding-top: 2em;
     padding-left: 2em;
-    margin: auto;
+    margin: 0 auto 10em auto;
     opacity: 0.5;
   }
   .weaponText {
     padding-top: 2em;
-    padding-right: 1em;
     font-size: 3em;
     text-align: center;
+    margin-bottom: 2em;
   }
   .artifactText {
     padding-top: 2em;
-    padding-right: 1em;
     font-size: 3em;
     text-align: center;
+    margin-bottom: 2em;
   }
   .const {
     height: auto;
@@ -168,7 +169,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .characterContainer {
-    height: 100vh;
+    height: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -335,7 +336,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .characterContainer {
-    height: 100vh;
+    height: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -502,7 +503,7 @@
 /* Medium devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .characterContainer {
-    height: 100vh;
+    height: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: .5fr 1.0fr .5fr;
@@ -669,7 +670,7 @@
 /* Large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .characterContainer {
-    height: 100vh;
+    height: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: .5fr 1.0fr .5fr;
@@ -828,7 +829,7 @@
 /* Large devices (large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {   
   .characterContainer {
-    height: 100vh;
+    height: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: .5fr 1.0fr .5fr;
