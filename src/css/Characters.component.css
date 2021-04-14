@@ -20,7 +20,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: var(--grid-gap);
+    grid-gap: 1em;
     background-color: var(--background-color);
     height: var(--height);
     width: var(--width);
@@ -39,7 +39,7 @@
     font-size: 2.5em;
     position: relative;
     text-align: center;
-    margin: 4em auto -3em auto;
+    margin: 2.5em auto -2em auto;
     height: 100px;
     width: var(--width);
     max-width: 400px;
