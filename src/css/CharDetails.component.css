@@ -3,9 +3,11 @@
 @media only screen and (max-width: 600px) {
   .characterContainer {
     height: 100%;
+    width: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
-    grid-template-rows: 0.3fr 0.5fr 0.1fr;
+    grid-template-rows: 0.3fr 0.3fr 0.1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
     "character"
     "menu"
@@ -45,7 +47,7 @@
   }
   .attMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .weaMenu {
@@ -60,7 +62,7 @@
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .artMenu {
@@ -75,7 +77,7 @@
   }
   .artMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .constMenu {
@@ -89,7 +91,7 @@
   }
   .constMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .talMenu {
@@ -103,7 +105,7 @@
   }
   .talMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .character {
@@ -143,13 +145,11 @@
     opacity: 0.5;
   }
   .weaponText {
-    padding-top: 2em;
     font-size: 3em;
     text-align: center;
     margin-bottom: 2em;
   }
   .artifactText {
-    padding-top: 2em;
     font-size: 3em;
     text-align: center;
     margin-bottom: 2em;
@@ -157,26 +157,25 @@
   .const {
     height: auto;
     width: 22em;
-    margin: 2em auto;
+    margin: auto;
   }
   .skills {
     height: auto;
     width: 22em;
-    margin: 2em auto;
+    margin: auto;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .characterContainer {
-    height: 100%;
+    height: 100vh;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.3fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-    "menu rightSide"
-    "character character";
+    "menu rightSide";
     color: white;
     font-family: 'GenshinFont';
   }
@@ -210,7 +209,7 @@
   }
   .attMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .weaMenu {
@@ -225,7 +224,7 @@
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .artMenu {
@@ -240,7 +239,7 @@
   }
   .artMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .constMenu {
@@ -254,7 +253,7 @@
   }
   .constMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .talMenu {
@@ -268,7 +267,7 @@
   }
   .talMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .character {
@@ -276,16 +275,11 @@
     text-align: center;
   }
   .name {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    
+    font-size: 0;
   }
   .image {
-    height: auto;
-    width: auto;
-    max-height: 0px;
-    max-width: 0px;
+    height: 0px;
+    width: 0px;
   }
 
 
@@ -301,13 +295,14 @@
   }
   .desc {
     height: 100px;
-    width: 250px;
-    font-size: 1em;
+    width: 300px;
+    font-size: 1.3em;
     padding-top: 3em;
-    padding-left: 2em;
+    padding-left: 1.5em;
     margin: auto;
     opacity: 0.5;
   }
+
   .weaponText {
     padding-top: 2em;
     padding-right: 1em;
@@ -336,14 +331,13 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .characterContainer {
-    height: 100%;
+    height: 100vh;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.3fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-    "menu rightSide"
-    "character character";
+    "menu rightSide";
     color: white;
     font-family: 'GenshinFont';
   }
@@ -377,7 +371,7 @@
   }
   .attMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .weaMenu {
@@ -392,7 +386,7 @@
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .artMenu {
@@ -407,7 +401,7 @@
   }
   .artMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .constMenu {
@@ -421,7 +415,7 @@
   }
   .constMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .talMenu {
@@ -435,7 +429,7 @@
   }
   .talMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .character {
@@ -443,15 +437,11 @@
     text-align: center;
   }
   .name {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
+    font-size: 0;
   }
   .image {
-    height: auto;
-    width: auto;
-    max-height: 0px;
-    max-width: 0px;
+    height: 0px;
+    width: 0px;
   }
 
 
@@ -482,7 +472,7 @@
   }
   .artifactText {
     padding-top: 2em;
-    padding-right: 1em;
+    padding-right: 4em;
     font-size: 3em;
     text-align: center;
   }
@@ -503,10 +493,11 @@
 /* Medium devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .characterContainer {
-    height: 100%;
+    height: 100vh;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
-    grid-template-columns: .5fr 1.0fr .5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
     "menu character rightSide";
     color: white;
@@ -542,7 +533,7 @@
   }
   .attMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .weaMenu {
@@ -557,7 +548,7 @@
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .artMenu {
@@ -572,7 +563,7 @@
   }
   .artMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .constMenu {
@@ -586,7 +577,7 @@
   }
   .constMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .talMenu {
@@ -600,12 +591,14 @@
   }
   .talMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .character {
     grid-area: "character";
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .name {
     font-size: 2.5em;
@@ -616,8 +609,8 @@
   .image {
     height: auto;
     width: auto;
-    max-height: 550px;
-    max-width: 250px;
+    max-height: 600px;
+    max-width: 400px;
   }
 
 
@@ -641,28 +634,32 @@
     margin: auto;
   }
   .weaponText {
+    width: 300px;
     padding-top: 2em;
     padding-right: 1em;
     font-size: 3em;
-    text-align: center;
+    margin: auto;
   }
   .artifactText {
+    width: 300px;
     padding-top: 2em;
     padding-right: 1em;
     font-size: 3em;
-    text-align: center;
+    margin: auto;
   }
   .const {
     height: auto;
     width: 22em;
     margin-top: 3em;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
   .skills {
     height: auto;
     width: 22em;
     margin-top: 3em;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -670,10 +667,13 @@
 /* Large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .characterContainer {
-    height: 100%;
+    height: 100vh;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
-    grid-template-columns: .5fr 1.0fr .5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "menu character rightSide";
     color: white;
     font-family: 'GenshinFont';
   }
@@ -703,7 +703,7 @@
   }
   .attMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .weaMenu {
@@ -718,7 +718,7 @@
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .artMenu {
@@ -733,7 +733,7 @@
   }
   .artMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .constMenu {
@@ -747,7 +747,7 @@
   }
   .constMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .talMenu {
@@ -761,11 +761,13 @@
   }
   .talMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .character {
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .name {
     font-size: 3em;
@@ -777,7 +779,7 @@
     height: auto;
     width: auto;
     max-height: 650px;
-    max-width: 700px;
+    max-width: 550px;
   }
 
 
@@ -804,35 +806,40 @@
     padding-top: 2em;
     padding-right: 1em;
     font-size: 3em;
-    text-align: center;
+    margin: auto;
   }
   .artifactText {
     padding-top: 2em;
     padding-right: 1em;
     font-size: 3em;
-    text-align: center;
+    margin: auto;
   }
   .const {
     height: auto;
     width: 22em;
     margin-top: 3em;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
   .skills {
     height: auto;
     width: 22em;
     margin-top: 3em;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 /* Large devices (large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {   
   .characterContainer {
-    height: 100%;
+    height: 100vh;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
-    grid-template-columns: .5fr 1.0fr .5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "menu character rightSide";
     color: white;
     font-family: 'GenshinFont';
   }
@@ -862,7 +869,7 @@
   }
   .attMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .weaMenu {
@@ -877,7 +884,7 @@
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .artMenu {
@@ -892,7 +899,7 @@
   }
   .artMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .constMenu {
@@ -906,7 +913,7 @@
   }
   .constMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .talMenu {
@@ -920,11 +927,13 @@
   }
   .talMenu:hover {
     color: var(--colorOnHover);
-    font-size: var(--font-size-hover);
+    transform: scale(1.2);
     padding: var(--padding);
   }
   .character {
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .name {
     font-size: 4em;
@@ -961,24 +970,26 @@
     padding-top: 2em;
     padding-right: 1em;
     font-size: 3em;
-    text-align: center;
+    margin: auto;
   }
   .artifactText {
     padding-top: 2em;
     padding-right: 1em;
     font-size: 3em;
-    text-align: center;
+    margin: auto;
   }
   .const {
     height: auto;
     width: 22em;
     margin-top: 3em;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
   .skills {
     height: auto;
     width: 22em;
     margin-top: 3em;
-    margin-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

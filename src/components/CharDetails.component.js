@@ -4,6 +4,8 @@ import Fade from 'react-reveal/Fade';
 import axios from 'axios';
 
 // import CharMenu from './CharMenu.component'
+import Artifacts from './Artifacts.component'
+import Weapons from './Weapons.component'
 import Constellations from './Constellations.component'
 import Skill from './Skills.component'
 import '../css/CharDetails.component.css'
@@ -65,7 +67,7 @@ export default function CharDetails({ match }) {
         .then(res => {
           setDetails(res.data);
           setVision(res.data.vision.toLowerCase())
-          setConstellations(res.data.constellations.map(s => s))
+          setConstellations(res.data.constellations.map(c => c))
           setSkills(res.data.skillTalents.map(s => s))
         })
     }, [url])
@@ -114,12 +116,14 @@ export default function CharDetails({ match }) {
                 {weaVisible && <Fade><div>
                     <div className="weaponText">
                         {details.weapon}
+                        <Weapons type={details.weapon} />
                     </div>
                 </div></Fade>}
 
                 {artVisible && <Fade><div>
                     <div className="artifactText">
-                        Artifact
+                        Artifacts
+                        <Artifacts />
                     </div>
                 </div></Fade>}
 
