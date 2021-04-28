@@ -2,11 +2,11 @@
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .characterContainer {
-    height: 100%;
+    height: auto;
     width: 100%;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
-    grid-template-rows: 0.3fr 0.3fr 0.1fr;
+    grid-template-rows: 300px 300px 0.3fr;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "character"
@@ -27,10 +27,13 @@
   }
   .menu {
     grid-area: menu;
-    padding: auto;
+    /* padding: auto; */
     height: 300px;
-    margin-top: 3em;
-    margin-left: 0.5em;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 3em;
+    margin-left: 0.5em; */
     text-align: center;
   }
   .rightSide {
@@ -50,6 +53,10 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .attMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+  }
   .weaMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -61,6 +68,11 @@
     
   }
   .weaMenu:hover {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .weaMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -80,6 +92,11 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .artMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .constMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -89,7 +106,13 @@
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  .constMenu:hover {
+  
+  .constMenu:hover{
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .constMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -108,9 +131,16 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .talMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .character {
     grid-area: character;
     text-align: center;
+    padding: auto;
+    margin-top: 0;
   }
   .name {
     font-size: 1.5em;
@@ -169,7 +199,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .characterContainer {
-    height: 100vh;
+    height: auto;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -212,6 +242,10 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .attMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+  }
   .weaMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -223,6 +257,11 @@
     
   }
   .weaMenu:hover {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .weaMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -242,6 +281,11 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .artMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .constMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -251,7 +295,13 @@
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  .constMenu:hover {
+  
+  .constMenu:hover{
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .constMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -266,6 +316,11 @@
     padding: var(--padding);
   }
   .talMenu:hover {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .talMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -331,7 +386,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .characterContainer {
-    height: 100vh;
+    height: auto;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -374,6 +429,10 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .attMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+  }
   .weaMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -385,6 +444,11 @@
     
   }
   .weaMenu:hover {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .weaMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -404,6 +468,11 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .artMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .constMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -413,7 +482,13 @@
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  .constMenu:hover {
+  
+  .constMenu:hover{
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .constMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -432,8 +507,13 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .talMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .character {
-    grid-area: "character";
+    grid-area: character;
     text-align: center;
   }
   .name {
@@ -472,7 +552,7 @@
   }
   .artifactText {
     padding-top: 2em;
-    padding-right: 4em;
+    padding-right: 1em;
     font-size: 3em;
     text-align: center;
   }
@@ -493,10 +573,10 @@
 /* Medium devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .characterContainer {
-    height: 100vh;
+    height: auto;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 300px 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
     "menu character rightSide";
@@ -514,7 +594,7 @@
     --colorNoHover: rgba(255, 255, 255, 0.555);
   }
   .menu {
-    grid-area: "menu";
+    grid-area: menu;
     padding: auto;
     margin-top: 3em;
     margin-left: 2em;
@@ -536,6 +616,10 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .attMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+  }
   .weaMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -547,6 +631,11 @@
     
   }
   .weaMenu:hover {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .weaMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -566,6 +655,11 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .artMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .constMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -575,7 +669,13 @@
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  .constMenu:hover {
+  
+  .constMenu:hover{
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .constMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -594,11 +694,18 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .talMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .character {
-    grid-area: "character";
+    grid-area: character;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    padding: auto;
+    margin-top: 0;
   }
   .name {
     font-size: 2.5em;
@@ -667,7 +774,7 @@
 /* Large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .characterContainer {
-    height: 100vh;
+    height: auto;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -688,9 +795,13 @@
     --colorNoHover: rgba(255, 255, 255, 0.555);
   }
   .menu {
+    grid-area: menu;
     padding: auto;
     margin-top: 3em;
     margin-left: 4em;
+  }
+  .rightSide {
+    grid-area: rightSide;
   }
   .attMenu {
     max-height: var(--menu-max-height);
@@ -706,6 +817,10 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .attMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+  }
   .weaMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -717,6 +832,11 @@
     
   }
   .weaMenu:hover {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .weaMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -736,6 +856,11 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .artMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .constMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -745,7 +870,13 @@
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  .constMenu:hover {
+  
+  .constMenu:hover{
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .constMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -764,10 +895,18 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .talMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .character {
+    grid-area: character;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    padding: auto;
+    margin-top: 0;
+    /* margin-top: auto;
+    margin-bottom: auto; */
   }
   .name {
     font-size: 3em;
@@ -833,7 +972,7 @@
 /* Large devices (large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {   
   .characterContainer {
-    height: 100vh;
+    height: auto;
     background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -854,9 +993,13 @@
     --colorNoHover: rgba(255, 255, 255, 0.555);
   }
   .menu {
+    grid-area: menu;
     padding: auto;
     margin-top: 3em;
     margin-left: 4em;
+  }
+  .rightSide {
+    grid-area: rightSide;
   }
   .attMenu {
     max-height: var(--menu-max-height);
@@ -872,6 +1015,10 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .attMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+  }
   .weaMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -883,6 +1030,11 @@
     
   }
   .weaMenu:hover {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .weaMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -902,6 +1054,11 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .artMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .constMenu {
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
@@ -911,7 +1068,13 @@
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  .constMenu:hover {
+  
+  .constMenu:hover{
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
+  .constMenu:focus {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -930,10 +1093,18 @@
     transform: scale(1.2);
     padding: var(--padding);
   }
+  .talMenu:focus {
+    color: var(--colorOnHover);
+    transform: scale(1.2);
+    padding: var(--padding);
+  }
   .character {
+    grid-area: character;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    padding: auto;
+    margin-top: 0;
   }
   .name {
     font-size: 4em;
