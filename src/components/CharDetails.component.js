@@ -1,5 +1,5 @@
 //import React from 'react'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Fade from 'react-reveal/Fade';
 import axios from 'axios';
 
@@ -20,6 +20,8 @@ export default function CharDetails({ match }) {
     const [skills, setSkills] = useState([])
     const [vision, setVision] = useState([]);
 
+    const contentRef = useRef();
+
     const [attVisible, setAtt] = useState(true);
     const [weaVisible, setWea] = useState(false);
     const [artVisible, setArt] = useState(false);
@@ -32,6 +34,7 @@ export default function CharDetails({ match }) {
         setArt(false)
         setCon(false)
         setTal(false)
+        contentRef.current.scrollIntoView({behavior: 'smooth'});
     }
     function handleWeaClick() {
         setAtt(false)
@@ -39,6 +42,7 @@ export default function CharDetails({ match }) {
         setArt(false)
         setCon(false)
         setTal(false)
+        contentRef.current.scrollIntoView({behavior: 'smooth'});
     }
     function handleArtClick() {
         setAtt(false)
@@ -46,6 +50,7 @@ export default function CharDetails({ match }) {
         setArt(true)
         setCon(false)
         setTal(false)
+        contentRef.current.scrollIntoView({behavior: 'smooth'});
     }
     function handleConClick() {
         setAtt(false)
@@ -53,6 +58,7 @@ export default function CharDetails({ match }) {
         setArt(false)
         setCon(true)
         setTal(false)
+        contentRef.current.scrollIntoView({behavior: 'smooth'});
     }
     function handleTalClick() {
         setAtt(false)
@@ -60,6 +66,7 @@ export default function CharDetails({ match }) {
         setArt(false)
         setCon(false)
         setTal(true)
+        contentRef.current.scrollIntoView({behavior: 'smooth'});
     }
     
     useEffect(() => {
@@ -104,7 +111,7 @@ export default function CharDetails({ match }) {
                         {details.name}
                     </div>
                 </div>
-                <div id="rightSide">
+                <div id="rightSide" ref={contentRef}>
                 {attVisible && <Fade><div className="att">
                     <div className="visionText">
                         <img className="visionImg"src={visionImgURL + vision + "/icon"}alt={vision}/>
