@@ -8,6 +8,7 @@ export default function Weap({weap, type}) {
     
     let url = "https://api.genshin.dev/weapons/" + weap;
     let icon = "https://api.genshin.dev/weapons/" + weap + "/icon"
+
     const [details, setDetails] = useState([])
     useEffect(() => {
         axios.get(url)
@@ -17,7 +18,21 @@ export default function Weap({weap, type}) {
     }, [url])
 
     return (
-       (details.type === type) && <img className="weapIcon"src={icon} alt={weap}/>
-            
+      <>
+        
+        
+        {(details.type === type) && <div className="weapon"> 
+          <img className="weapIcon"src={icon} alt={weap}/>
+        </div>}
+
+       {(details.type === type) && <div className="weapText">
+          <div className="weapName">
+            {details.name}
+          </div>
+          <div className="weapPassive">
+            {details.passiveDesc}
+          </div>
+        </div>}
+       </>
     )
 }

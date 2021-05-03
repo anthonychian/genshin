@@ -17,7 +17,28 @@ export default function Weap({art}) {
     }, [url])
 
     return (
-       (details.max_rarity === 5) && <img className="artIcon"src={icon} alt={art}/>
-            
+      <>
+        {(details.max_rarity === 5) && <div className="artifact"> 
+          <img className="artIcon"src={icon} alt={art}/>
+        </div>}
+
+        {(details.max_rarity === 5) && <div className="artText"> 
+          <div className="artName">
+            {details.name}
+          </div>
+          <div className="artBonus">
+            2-Piece Bonus
+          </div>
+          <div className="art2Passive">
+            {details['2-piece_bonus']}
+          </div>
+          <div className="artBonus">
+            4-Piece Bonus
+          </div>
+          <div className="art4Passive">
+          {details['4-piece_bonus']}
+          </div>
+        </div>}
+      </>
     )
 }

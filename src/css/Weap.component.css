@@ -2,4 +2,50 @@
     height: 70px;
     width: 70px;
     object-fit: cover;
+    font-size: 0;
+}
+.weapName {
+    font-size: 20px;
+    color: yellow;
+}
+
+.weapText {
+    font-size: 15px;
+    height: auto;
+    max-width: 300px;
+    width: auto;
+    margin-top: -250px;
+
+    display: none;
+    position: absolute;
+    pointer-events: none;
+
+    padding: 0.5em;
+    border-radius: 25px;
+    border: 2px solid rgb(58, 58, 179);
+}
+.weapon:hover + .weapText{
+    display:block;
+    background-color: black;
+}
+@media only screen and (max-width: 600px) {
+    .weapText {
+        font-size: 15px;
+        height: auto;
+        max-width: 300px;
+        width: auto;
+        display: none;
+        pointer-events: none;
+        /* margin-top: -250px; */
+        /* margin-left: 125px; */
+        position: absolute;
+        margin: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        padding: 0.5em;
+        border-radius: 25px;
+        border: 2px solid rgb(58, 58, 179);
+    }
 }
