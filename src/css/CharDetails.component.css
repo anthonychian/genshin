@@ -1,10 +1,29 @@
+.character {
+  position: relative;
+}
+.image {
+  
+  top: 0;
+  bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  
+}
 
+.bg {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(26, 26, 24, 0.7);
+  position: fixed;
+  top: 0;
+}
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .characterContainer {
     height: 100%;
     width: 100%;
-    background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-rows: 300px 300px 0.3fr;
     grid-template-columns: 1fr;
@@ -200,7 +219,7 @@
 @media only screen and (min-width: 600px) {
   .characterContainer {
     height: 100vh;
-    background-color: rgb(26, 26, 24, 0.7);
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -388,7 +407,6 @@
 @media only screen and (min-width: 768px) {
   .characterContainer {
     height: 100vh;
-    background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -575,7 +593,6 @@
 @media only screen and (min-width: 992px) {
   .characterContainer {
     height: 100vh;
-    background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
     grid-template-rows: 1fr;
@@ -776,7 +793,6 @@
 @media only screen and (min-width: 1200px) {
   .characterContainer {
     height: 100vh;
-    background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -974,7 +990,6 @@
 @media only screen and (min-width: 1440px) {   
   .characterContainer {
     height: 100vh;
-    background-color: rgb(26, 26, 24, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -1101,7 +1116,7 @@
   }
   .character {
     grid-area: character;
-    text-align: center;
+    /* text-align: center; */
     /* margin-top: auto;
     margin-bottom: auto; */
     padding: auto;

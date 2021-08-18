@@ -2,6 +2,7 @@
     height: 7vh;
     font-size: 1em;
     font-family: Verdana, sans-serif;
+    z-index: 1;
 }
 
 .brand-name {

@@ -81,6 +81,7 @@ export default function CharDetails({ match }) {
 
     return (
         <Fade>
+            <div className="bg"></div>
             <div className="characterContainer">
                 
                 <div id="menu" className="menu">
@@ -106,10 +107,10 @@ export default function CharDetails({ match }) {
                 </div>
 
                 <div id="character"className="character">
-                    <img className="image"src={charImgURL}alt={details.name}/>
                     <div className="name">
                         {details.name}
                     </div>
+                    <img className="image"src={charImgURL}alt={details.name}/>
                 </div>
                 <div id="rightSide" ref={contentRef}>
                 {attVisible && <Fade><div className="att">

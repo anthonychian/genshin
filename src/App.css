@@ -1,9 +1,7 @@
 .my-app {
-    
-    /* background-color: rgb(48, 48, 82);
-    height: auto;
-    min-height: 100vh;
-    overflow: hidden; */
+    /* height: 120vh;
+    width: 100%;
+    background-color: rgb(26, 26, 24, 0.7); */
 }
 @font-face {
     font-family: 'GenshinFont';
@@ -16,4 +14,5 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
 }
