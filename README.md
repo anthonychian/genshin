@@ -1,6 +1,6 @@
 # Genshin Web App
 
-This is a web application for the game Genshin Impact. Features character information, builds, tier list, and more.
+A web application for the game Genshin Impact. Uses the API https://genshin.dev/ Features character information, builds, tier list, and more.
 
 # Installation
 
