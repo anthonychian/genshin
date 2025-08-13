@@ -1,18 +1,24 @@
+html {
+  height: 100vh;
+}
 .my-app {
-    /* height: 120vh;
+  /* height: 120vh;
     width: 100%;
     background-color: rgb(26, 26, 24, 0.7); */
-}
-@font-face {
-    font-family: 'GenshinFont';
-    src: url('./assets/ja-jp.ttf')  format('truetype');
+  /* background-color: rgb(26, 26, 24, 0.7); */
+  background-color: rgb(26, 26, 24, 0.7);
 }
 
-body { 
-    background: url("https://www.gensh.in/wallpaper/genshin/genshin_25_4K.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
+@font-face {
+  font-family: "GenshinFont";
+  src: url("./assets/ja-jp.ttf") format("truetype");
+}
+
+body {
+  background: url("https://images7.alphacoders.com/116/1161810.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,38 +1,34 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
-import axios from 'axios'
+import axios from "axios";
 
-import '../css/Weap.component.css';
+import "../css/Weap.component.css";
 
-export default function Weap({weap, type}) {
-    
-    let url = "https://api.genshin.dev/weapons/" + weap;
-    let icon = "https://api.genshin.dev/weapons/" + weap + "/icon"
+export default function Weap({ weap, type }) {
+  let url = "https://genshin.jmp.blue/weapons/" + weap;
+  let icon = "https://genshin.jmp.blue/weapons/" + weap + "/icon";
 
-    const [details, setDetails] = useState([])
-    useEffect(() => {
-        axios.get(url)
-        .then(res => {
-          setDetails(res.data);
-        })
-    }, [url])
+  const [details, setDetails] = useState([]);
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setDetails(res.data);
+    });
+  }, [url]);
 
-    return (
-      <>
-        
-        
-        {(details.type === type) && <div className="weapon"> 
-          <img className="weapIcon"src={icon} alt={weap}/>
-        </div>}
+  return (
+    <>
+      {details.type === type && (
+        <div className="weapon">
+          <img className="weapIcon" src={icon} alt={weap} />
+        </div>
+      )}
 
-       {(details.type === type) && <div className="weapText">
-          <div className="weapName">
-            {details.name}
-          </div>
-          <div className="weapPassive">
-            {details.passiveDesc}
-          </div>
-        </div>}
-       </>
-    )
+      {details.type === type && (
+        <div className="weapText">
+          <div className="weapName">{details.name}</div>
+          <div className="weapPassive">{details.passiveDesc}</div>
+        </div>
+      )}
+    </>
+  );
 }

@@ -2,14 +2,12 @@
   position: relative;
 }
 .image {
-  
   top: 0;
   bottom: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin: auto;
-  
 }
 
 .bg {
@@ -19,7 +17,7 @@
   position: fixed;
   top: 0;
 }
-  /* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .characterContainer {
     height: 100%;
@@ -27,12 +25,12 @@
     display: grid;
     grid-template-rows: 300px 300px 0.3fr;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "character"
-    "menu"
-    "rightSide";
+    grid-template-areas:
+      "character"
+      "menu"
+      "rightSide";
     color: white;
-    font-family: 'GenshinFont';
+    font-family: "GenshinFont";
   }
   :root {
     --padding: 1.5em;
@@ -62,7 +60,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -80,11 +78,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
@@ -100,11 +97,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .artMenu:hover {
     color: var(--colorOnHover);
@@ -120,13 +116,13 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  
-  .constMenu:hover{
+
+  .constMenu:hover {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -140,7 +136,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -165,7 +161,6 @@
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
-    
   }
   .image {
     height: auto;
@@ -174,14 +169,13 @@
     max-width: 200px;
   }
 
-
   .visionText {
     padding-right: 1em;
     font-size: 3em;
     text-align: center;
   }
   .visionImg {
-    padding-right: .5em;
+    padding-right: 0.5em;
     text-align: center;
   }
   .desc {
@@ -219,15 +213,14 @@
 @media only screen and (min-width: 600px) {
   .characterContainer {
     height: 100vh;
-    
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-    "menu rightSide";
+    grid-template-areas: "menu rightSide";
 
     color: white;
-    font-family: 'GenshinFont';
+    font-family: "GenshinFont";
   }
   :root {
     --padding: 1.5em;
@@ -252,7 +245,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -270,11 +263,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
@@ -290,11 +282,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .artMenu:hover {
     color: var(--colorOnHover);
@@ -310,13 +301,13 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  
-  .constMenu:hover{
+
+  .constMenu:hover {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -330,7 +321,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -357,7 +348,6 @@
     width: 0px;
   }
 
-
   .visionText {
     padding-top: 2em;
     padding-right: 0em;
@@ -365,7 +355,7 @@
     text-align: center;
   }
   .visionImg {
-    padding-right: .5em;
+    padding-right: 0.5em;
     text-align: center;
   }
   .desc {
@@ -410,10 +400,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-    "menu rightSide";
+    grid-template-areas: "menu rightSide";
     color: white;
-    font-family: 'GenshinFont';
+    font-family: "GenshinFont";
   }
   :root {
     --padding: 1.5em;
@@ -438,7 +427,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -456,11 +445,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
@@ -476,11 +464,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .artMenu:hover {
     color: var(--colorOnHover);
@@ -496,13 +483,13 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  
-  .constMenu:hover{
+
+  .constMenu:hover {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -516,7 +503,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -543,7 +530,6 @@
     width: 0px;
   }
 
-
   .visionText {
     padding-top: 2em;
     padding-right: 0em;
@@ -551,7 +537,7 @@
     text-align: center;
   }
   .visionImg {
-    padding-right: .5em;
+    padding-right: 0.5em;
     text-align: center;
   }
   .desc {
@@ -596,10 +582,9 @@
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas:
-    "menu character rightSide";
+    grid-template-areas: "menu character rightSide";
     color: white;
-    font-family: 'GenshinFont';
+    font-family: "GenshinFont";
   }
   :root {
     --padding: 1.5em;
@@ -624,7 +609,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -642,11 +627,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
@@ -662,11 +646,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .artMenu:hover {
     color: var(--colorOnHover);
@@ -682,13 +665,13 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  
-  .constMenu:hover{
+
+  .constMenu:hover {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -702,7 +685,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -729,7 +712,6 @@
     font-size: 2.5em;
     font-weight: bold;
     text-align: center;
-    
   }
   .image {
     height: auto;
@@ -738,7 +720,6 @@
     max-width: 400px;
   }
 
-
   .visionText {
     padding-top: 2em;
     padding-right: 0em;
@@ -746,7 +727,7 @@
     text-align: center;
   }
   .visionImg {
-    padding-right: .5em;
+    padding-right: 0.5em;
     text-align: center;
   }
   .desc {
@@ -788,7 +769,6 @@
   }
 }
 
-
 /* Large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .characterContainer {
@@ -796,10 +776,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas:
-    "menu character rightSide";
+    grid-template-areas: "menu character rightSide";
     color: white;
-    font-family: 'GenshinFont';
+    font-family: "GenshinFont";
   }
   :root {
     --padding: 1.5em;
@@ -824,7 +803,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -842,11 +821,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
@@ -862,11 +840,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .artMenu:hover {
     color: var(--colorOnHover);
@@ -882,13 +859,13 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  
-  .constMenu:hover{
+
+  .constMenu:hover {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -902,7 +879,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -920,7 +897,7 @@
   .character {
     grid-area: character;
     text-align: center;
-    padding: auto;
+    /* padding: auto; */
     margin-top: 0;
     /* margin-top: auto;
     margin-bottom: auto; */
@@ -929,7 +906,6 @@
     font-size: 3em;
     font-weight: bold;
     text-align: center;
-    
   }
   .image {
     height: auto;
@@ -938,7 +914,6 @@
     max-width: 550px;
   }
 
-
   .visionText {
     padding-top: 2em;
     padding-right: 0em;
@@ -946,7 +921,7 @@
     text-align: center;
   }
   .visionImg {
-    padding-right: .5em;
+    padding-right: 0.5em;
     text-align: center;
   }
   .desc {
@@ -987,16 +962,15 @@
 }
 
 /* Large devices (large laptops and desktops, 1440px and up) */
-@media only screen and (min-width: 1440px) {   
+@media only screen and (min-width: 1440px) {
   .characterContainer {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas:
-    "menu character rightSide";
+    grid-template-areas: "menu character rightSide";
     color: white;
-    font-family: 'GenshinFont';
+    font-family: "GenshinFont";
   }
   :root {
     --padding: 1.5em;
@@ -1021,7 +995,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -1039,11 +1013,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .weaMenu:hover {
     color: var(--colorOnHover);
@@ -1059,11 +1032,10 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
-    
   }
   .artMenu:hover {
     color: var(--colorOnHover);
@@ -1079,13 +1051,13 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
   }
-  
-  .constMenu:hover{
+
+  .constMenu:hover {
     color: var(--colorOnHover);
     transform: scale(1.2);
     padding: var(--padding);
@@ -1099,7 +1071,7 @@
     max-height: var(--menu-max-height);
     max-width: var(--menu-max-width);
     background-color: transparent;
-    border:transparent;
+    border: transparent;
     color: var(--colorNoHover);
     font-size: var(--font-size);
     padding: var(--padding);
@@ -1126,7 +1098,6 @@
     font-size: 4em;
     font-weight: bold;
     text-align: center;
-    
   }
   .image {
     height: auto;
@@ -1141,7 +1112,7 @@
     text-align: center;
   }
   .visionImg {
-    padding-right: .5em;
+    padding-right: 0.5em;
     text-align: center;
   }
   .desc {
