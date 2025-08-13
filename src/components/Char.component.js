@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Bounce from "react-reveal/Bounce";
-import Pulse from "react-reveal/Pulse";
+// import Bounce from "react-reveal/Bounce";
+// import Pulse from "react-reveal/Pulse";
 
 import "../css/Char.component.css";
 

@@ -1,6 +1,6 @@
 //import React from 'react'
 import React, { useState, useEffect, useRef } from "react";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
 import axios from "axios";
 
 // import CharMenu from './CharMenu.component'
