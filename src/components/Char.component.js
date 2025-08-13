@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import Bounce from "react-reveal/Bounce";
-// import Pulse from "react-reveal/Pulse";
 
 import "../css/Char.component.css";
 
@@ -15,32 +13,28 @@ export default function Char({ char }) {
   const link = `/characters/${char}`;
   const displayName = transformNameToDisplay(char);
   return (
-    <Bounce>
-      <div onMouseEnter={handleMouseHover} onMouseLeave={handleMouseHover}>
-        {hover && (
-          <div className="item-container">
-            <Pulse>
-              <Link to={link}>
-                <img className="grid-item" src={charIconURL} alt={char} />
-              </Link>
-              <Link to={link}>
-                <div className="characterName">{displayName}</div>
-              </Link>
-            </Pulse>
-          </div>
-        )}
-        {!hover && (
-          <div className="item-container">
-            <Link to={link}>
-              <img className="grid-item" src={charIconURL} alt={char} />
-            </Link>
-            <Link to={link}>
-              <div className="characterName">{displayName}</div>
-            </Link>
-          </div>
-        )}
-      </div>
-    </Bounce>
+    <div onMouseEnter={handleMouseHover} onMouseLeave={handleMouseHover}>
+      {hover && (
+        <div className="item-container">
+          <Link to={link}>
+            <img className="grid-item" src={charIconURL} alt={char} />
+          </Link>
+          <Link to={link}>
+            <div className="characterName">{displayName}</div>
+          </Link>
+        </div>
+      )}
+      {!hover && (
+        <div className="item-container">
+          <Link to={link}>
+            <img className="grid-item" src={charIconURL} alt={char} />
+          </Link>
+          <Link to={link}>
+            <div className="characterName">{displayName}</div>
+          </Link>
+        </div>
+      )}
+    </div>
   );
 }
 

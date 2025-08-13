@@ -1,6 +1,5 @@
 //import React from 'react'
 import React, { useState, useEffect, useRef } from "react";
-// import Fade from "react-reveal/Fade";
 import axios from "axios";
 
 // import CharMenu from './CharMenu.component'
@@ -35,7 +34,6 @@ export default function CharDetails({ match }) {
     setArt(false);
     setCon(false);
     setTal(false);
-    contentRef.current.scrollIntoView({ behavior: "smooth" });
   }
   function handleWeaClick() {
     setAtt(false);
@@ -43,7 +41,6 @@ export default function CharDetails({ match }) {
     setArt(false);
     setCon(false);
     setTal(false);
-    contentRef.current.scrollIntoView({ behavior: "smooth" });
   }
   function handleArtClick() {
     setAtt(false);
@@ -51,7 +48,6 @@ export default function CharDetails({ match }) {
     setArt(true);
     setCon(false);
     setTal(false);
-    contentRef.current.scrollIntoView({ behavior: "smooth" });
   }
   function handleConClick() {
     setAtt(false);
@@ -59,7 +55,6 @@ export default function CharDetails({ match }) {
     setArt(false);
     setCon(true);
     setTal(false);
-    contentRef.current.scrollIntoView({ behavior: "smooth" });
   }
   function handleTalClick() {
     setAtt(false);
@@ -67,7 +62,6 @@ export default function CharDetails({ match }) {
     setArt(false);
     setCon(false);
     setTal(true);
-    contentRef.current.scrollIntoView({ behavior: "smooth" });
   }
 
   useEffect(() => {
@@ -80,99 +74,86 @@ export default function CharDetails({ match }) {
   }, [url]);
 
   return (
-    <Fade>
-      <div className="bg"></div>
-      <div className="characterContainer">
-        <div id="menu" className="menu">
-          <button onClick={handleAttClick} className="attMenu">
-            Attributes
-          </button>
-          <br />
-          <button onClick={handleWeaClick} className="weaMenu">
-            Weapons
-          </button>
-          <br />
-          <button onClick={handleArtClick} className="artMenu">
-            Artifacts
-          </button>
-          <br />
-          <button onClick={handleConClick} className="constMenu">
-            Constellations
-          </button>
-          <br />
-          <button onClick={handleTalClick} className="talMenu">
-            Talents
-          </button>
-        </div>
-
-        <div id="character" className="character">
-          <div className="name">{details.name}</div>
-          <img className="image" src={charImgURL} alt={details.name} />
-        </div>
-        <div id="rightSide" ref={contentRef}>
-          {attVisible && (
-            <Fade>
-              <div className="att">
-                <div className="visionText">
-                  <img
-                    className="visionImg"
-                    src={visionImgURL + vision + "/icon"}
-                    alt={vision}
-                  />
-                  {details.vision}
-                </div>
-                <div className="desc">{details.description}</div>
-              </div>
-            </Fade>
-          )}
-
-          {weaVisible && (
-            <Fade>
-              <div>
-                <div className="weaponText">
-                  {details.weapon}
-                  <Weapons type={details.weapon} />
-                </div>
-              </div>
-            </Fade>
-          )}
-
-          {artVisible && (
-            <Fade>
-              <div>
-                <div className="artifactText">
-                  Artifacts
-                  <Artifacts />
-                </div>
-              </div>
-            </Fade>
-          )}
-
-          {conVisible && (
-            <Fade>
-              <div className="const">
-                {constellations.map((a) => (
-                  <div key={a}>
-                    <Constellations constellation={a} />
-                  </div>
-                ))}
-              </div>
-            </Fade>
-          )}
-
-          {talVisible && (
-            <Fade>
-              <div className="skills">
-                {skills.map((s) => (
-                  <div key={s}>
-                    <Skill skill={s} />
-                  </div>
-                ))}
-              </div>
-            </Fade>
-          )}
-        </div>
+    <div className="characterContainer">
+      <div id="menu" className="menu">
+        <button onClick={handleAttClick} className="attMenu">
+          Attributes
+        </button>
+        <br />
+        <button onClick={handleWeaClick} className="weaMenu">
+          Weapons
+        </button>
+        <br />
+        <button onClick={handleArtClick} className="artMenu">
+          Artifacts
+        </button>
+        <br />
+        <button onClick={handleConClick} className="constMenu">
+          Constellations
+        </button>
+        <br />
+        <button onClick={handleTalClick} className="talMenu">
+          Talents
+        </button>
       </div>
-    </Fade>
+
+      <div id="character" className="character">
+        <div className="name">{details.name}</div>
+        <img className="image" src={charImgURL} alt={details.name} />
+      </div>
+      <div id="rightSide" ref={contentRef}>
+        {attVisible && (
+          <div className="att">
+            <div className="visionText">
+              <img
+                className="visionImg"
+                src={visionImgURL + vision + "/icon"}
+                alt={vision}
+              />
+              {details.vision}
+            </div>
+            <div className="desc">{details.description}</div>
+          </div>
+        )}
+
+        {weaVisible && (
+          <div>
+            <div className="weaponText">
+              {details.weapon}
+              <Weapons type={details.weapon} />
+            </div>
+          </div>
+        )}
+
+        {artVisible && (
+          <div>
+            <div className="artifactText">
+              Artifacts
+              <Artifacts />
+            </div>
+          </div>
+        )}
+
+        {conVisible && (
+          <div className="const">
+            {constellations.map((a) => (
+              <div key={a}>
+                <Constellations constellation={a} />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {talVisible && (
+          <div className="skills">
+            {skills.map((s) => (
+              <div key={s}>
+                <Skill skill={s} />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
